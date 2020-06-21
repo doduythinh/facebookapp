@@ -1,0 +1,88 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+html{
+    font-size: 75%;
+    box-sizing: border-box;
+}
+.header
+{
+    @include respond(tab-land)
+    {
+        height: 82px;
+        background-color: $color-blue-mot;
+        border-bottom: 1px solid $color-blue-mot;
+        cursor: pointer;
+    }
+    @include respond(tab-land)
+    {
+        .header__facebook
+        {
+            float: left;
+            font-size: 3.2rem;
+            padding-top: 1.5rem;
+            font-weight: $font-weight;
+            margin-left: 10rem;
+        }
+    }
+    .header__facebook_name{
+        text-decoration: none;
+        color: $color-white;
+        font-family: inherit;
+    }
+    .header__Email
+    {
+        color: $color-white;
+        display: inline-block;
+        float:right;
+        display: inline-block;
+        margin-right: 30.5rem;
+        margin-top: 2rem;
+
+    }
+    .header__email-input{
+        width: 13rem;
+        height: 1.5rem;
+    }
+    .header__MatKhau
+    {
+        color: $color-white;
+        border-color: #1d2a5b;
+        display: inline-block;
+        float: right;
+        margin-top: 2rem;
+        margin-right: -28rem;
+        //width: 14.2rem;
+        //transform: translate(50%,50%);
+
+    }
+    .header__MatKhau-password-input{
+        width:13rem;
+        height: 1.5rem;
+    }
+    .header_three
+    {
+        float: right;
+    }
+
+    .header__forget-name{
+        color: $color-white;
+        margin-left: -2rem;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    .header__login-button{
+        float: right;
+        margin-right: -35rem;
+        margin-top: 3.3rem;
+    }
+    .header__login-button-lg{
+        color: white;
+        background: #4267b2;
+        padding: 0.2rem;
+        cursor: pointer;
+    }
+}
