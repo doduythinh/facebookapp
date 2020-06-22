@@ -4,19 +4,19 @@ html{
 }
 @media (max-width: 450px) {
     .bodyleft{
-        float: right;
+        float: $float-right;
         background-color: lightslategray;
     }
 }
 .bodyleft__account{
-    float: left;
+    float: $float-left;
 }
 .bodyleft__label
 {
     font-size: 2.8rem;
     font-family: inherit;
     font-weight: bold;
-    float: right;
+    float: $float-right;
     margin-top: 3rem;
     margin-right: 33rem;
     color: $color-black;
@@ -26,7 +26,7 @@ html{
     margin-top: 0.3rem;
     font-size: 1.6rem;
     color:$color-black ;
-    float: right;
+    float: $float-right;
     margin-right: 26rem;
 }
 .bodyleft__firstname{
@@ -36,12 +36,12 @@ html{
     word-spacing: normal;
     border-radius: 0.4rem;
     margin-bottom: 1rem;
-    float: right;
+    float: $float-right;
     height: 2rem;
     padding: 0.3rem;
     width: 16.5rem;
     border: 2px solid #808080;
-    display: inline-block;
+    display: $display;
 
 
 }
@@ -51,7 +51,7 @@ html{
     word-spacing: normal;
     border-radius: 0.4rem;
     margin-left: 1rem;
-    float: right;
+    float: $float-right;
     height: 2rem;
     width: 16rem;
     padding: 0.3rem;
@@ -64,7 +64,7 @@ html{
     border-radius: 0.4rem;
     margin-bottom: 1rem;
     margin-left: 11rem;
-    float: right;
+    float: $float-right;
     height: 2rem;
     padding: 0.3rem;
     width: 34.5rem;
@@ -75,7 +75,7 @@ html{
     height: 2rem;
     border-radius: 0.4rem;
     margin-bottom: 1rem;
-    float: right;
+    float: $float-right;
     padding: 0.3rem;
     porder: 2px solid #808080;
 }
@@ -89,29 +89,29 @@ html{
     font-size: 1.5rem;
     margin-top: 0.5rem;
     margin-right: 37rem;
-    float: right;
+    float: $float-right;
 }
 .bodyleft__Birthdate-option_date{
     margin-right: -30rem;
-    float: right;
+    float: $float-right;
 }
 .bodyleft__day{
-    display: inline-block;
-    float: right;
+    display: $display;
+    float: $float-right;
     margin-right: -30rem;
     padding: 0.5rem;
     margin-top: 3rem;
 }
 .bodyleft__Month{
-    display: inline-block;
-    float: right;
+    display: $display;
+    float: $float-right;
     margin-right: -20rem;
     padding: 0.5rem;
     margin-top: 3rem;
 }
 .bodyleft__Year{
-    display: inline-block;
-    float: right;
+    display: $display;
+    float: $float-right;
     margin-right: -10rem;
     padding: 0.5rem;
     margin-top: 3rem;
@@ -123,6 +123,11 @@ html{
     margin-right: -26.5rem;
     margin-top:8rem;
 }
+.sex{
+    margin-right: 6rem;
+    margin-top: 1rem;
+}
+
 .sex-name{
     float: right;
     color: #808080;
@@ -132,42 +137,45 @@ html{
 .bodyleft__female{
     float: right;
     margin-top:0.2rem;
-    display: inline-block;
+    display: $display;
     margin-left:  1rem;
     color: black;
 }
 .bodyleft__Male{
-    float: right;
+    float: $float-right;
     margin-top:0.2rem;
-    display: inline-block;
+    display: $display;
     margin-left:  1rem;
 }
 .bodyleft__Option{
-    float: right;
+    float: $float-right;
     margin-top:0.2rem;
-    display: inline-block;
+    display: $display;
     margin-left:  1rem;
 }
 .Female{
-    float: right;
-    display: inline-block;
+    float: $float-right;
+    display: $display;
     margin-left:  1rem;
     color: black;
+    font-size: 1.5rem;
 }
 .Male{
-    float: right;
-    display: inline-block;
+    float: $float-right;
+    display: $display;
     margin-left:  1rem;
     color: black;
+    font-size: 1.5rem;
 }
 .Option{
-    float: right;
-    display: inline-block;
+    float: $float-right;
+    display: $display;
     margin-left:  1rem;
     color: black;
+    font-size: 1.5rem;
 }
 .bodyleft__button{
-    float: right;
+    float: $float-right;
     margin-right: -17rem;
     margin-top: 12rem;
 }
@@ -186,4 +194,11 @@ html{
     text-decoration: none;
     cursor: pointer;
 }
+.errorMessage {
+    color: red;
+    font-size: 1.1em;
+    position: absolute;
+    float: $float-right;
+}
+
 

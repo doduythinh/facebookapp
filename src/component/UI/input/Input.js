@@ -5,13 +5,13 @@ const input = (props) => {
 
     switch (props.inputType) {
         case('input'):
-            inputElement = <input  {...props} />
+            inputElement = <input className="Input" {...props.elementConfig} value={props.value}/>
             break;
         case('textarea'):
-            inputElement = <textarea {...props}  />
+            inputElement = <textarea {...props} {...props.elementConfig} value={props.value}  />
             break;
         case('select'):
-            inputElement = <select {...props}>
+            inputElement = <select {...props} {...props.elementConfig} value={props.value} >
                 <option></option>
             </select>
             break;
