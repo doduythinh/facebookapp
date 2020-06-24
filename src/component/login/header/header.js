@@ -1,10 +1,17 @@
 import React,{ Component }  from 'react';
 import login from '../../../sass/login.scss';
+import  { Redirect,Router,Switch,Link } from  'react-router-dom';
+import login_new from "../../login_new/header/login_new";
+import  { NavLink } from 'react-router-dom';
 class Header extends Component{
-    state= {
-
+    checkoutfacebookHandler = () =>{
+        this.props.history.goBack();
+    }
+    checkoutfacebookcontinuehandler = () =>{
+        this.props.history.replace('/login_new');
     }
     render() {
+        let checkout = <Redirect />
         return (
             <div className="header">
                 <div className="header__facebook">
@@ -24,7 +31,9 @@ class Header extends Component{
                     </div>
                 </div>
                     <div className="header__login-button">
-                        <button href="#" className="header__login-button-lg">Đăng nhập</button>
+                        <NavLink to="/login_new"><button href="#" className="header__login-button-lg">Đăng nhập
+                        </button>
+                        </NavLink>
                     </div>
             </div>
         );

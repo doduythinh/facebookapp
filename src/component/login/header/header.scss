@@ -22,22 +22,21 @@ html{
         .header__facebook
         {
             float: left;
-            font-size: 3.2rem;
+            font-size: $font-size-facebook;
             padding-top: 1.5rem;
             font-weight: $font-weight;
             margin-left: 10rem;
         }
         .header__facebook_name{
-            text-decoration: none;
+            text-decoration: $text-decoration-none;
             color: $color-white;
             font-family: inherit;
         }
         .header__Email
         {
             color: $color-white;
-            display: inline-block;
             float:right;
-            display: inline-block;
+            display: $display;
             margin-right: 30.5rem;
             margin-top: 2rem;
 
@@ -50,7 +49,7 @@ html{
         {
             color: $color-white;
             border-color: #1d2a5b;
-            display: inline-block;
+            display: $display;
             float: right;
             margin-top: 2rem;
             margin-right: -28rem;
@@ -85,7 +84,12 @@ html{
             background: #4267b2;
             padding: 0.2rem;
             cursor: pointer;
-        }
+            height: 2.2rem;
+            &:active{
+                
             }
+        }
+
+        }
     }
 }

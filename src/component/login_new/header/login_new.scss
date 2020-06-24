@@ -1,0 +1,56 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+html{
+  font-size: 75%;
+  box-sizing: border-box;
+}
+.header
+{
+      @media (max-width: 1280px){
+        height: 82px;
+        background-color: $color-blue-mot;
+        border-bottom: 1px solid $color-blue-mot;
+        cursor: pointer;
+        width: 1280px;
+      }
+      .header__login__new{
+        float: left;
+        margin-left: 10rem;
+        margin-top: 1.5rem;
+        display: inline-block;
+      }
+      .header__login__new--name{
+        font-size: $font-size-facebook;
+        color: $color-white;
+        text-decoration: $text-decoration-none;
+        font-weight: $font-weight;
+        font-family: $font-famlily-iherit;
+      }
+      .header__login__new__account
+      {
+        float: left;
+        margin-left: 1rem;
+        margin-top: 2.7rem;
+        display: inline-block;
+      }
+      .header__login__new__account--name{
+        color: white;
+        font-size: 1.2rem;
+        background-color: #42b72a;
+        border-color: #42b72a;
+        cursor: pointer;
+        display: inline-block;
+        height: 2.7rem;
+        width: 12rem;
+        vertical-align: middle;
+        font-weight: bold;
+        &:hover{
+          background-color: #42b72ad9;
+        }
+        &:active{
+          background-color: #42b72ad9;
+        }
+        }
+}
