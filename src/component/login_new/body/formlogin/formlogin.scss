@@ -1,0 +1,75 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+html{
+  font-size: 65%;
+}
+@media (max-width: 1280px) {
+  .Background__image-SignIn-login{
+    width: 100%;
+    background: linear-gradient(#fff, #d9ddeb);
+    position: absolute;
+    height: 60%;
+  }
+}
+
+.login{
+  border: 1px solid #dddfe2;
+  border-radius: 3px;
+  width: 50rem;
+  height: 23rem;
+  background: white;
+  text-align: center;
+  display: block;
+  line-height: 1.34;
+  margin-top: 7rem;
+  margin-left: 27rem;
+}
+.login__name-dn{
+  margin-top: 3rem;
+}
+.login-name{
+  font-size: 1.5em;
+
+}
+.login__input-email{
+  margin-top: 1.5rem;
+}
+.login__input-mk{
+  margin-top: 1.5rem;
+}
+.login__input__mk_mot{
+  width: 25rem;
+  height: 2.5rem;
+}
+.login__input__mk_hai{
+  width: 25rem;
+  height: 2.5rem;
+}
+.login__button{
+  margin-top: 1.5rem;
+}
+.login-button-dn{
+  width: 25rem;
+  height: 3.5rem;
+  color: white;
+  background-color: #4267b2;
+  border-color: #33528E;
+  font-weight: bold;
+  &:hover{
+    border-color: #869DCD;
+  }
+  cursor: pointer;
+}
+.login__button{
+  align:center;
+}
+.login__forget--password{
+  color:  #4267b2;
+  text-decoration: none;
+  font-size: 1.1rem;
+  &:hover{
+    text-decoration:underline;
+  }
+}

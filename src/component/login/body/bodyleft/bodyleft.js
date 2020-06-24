@@ -1,12 +1,17 @@
 import React,{ Component }  from 'react';
 import Bodyleft from '../../../../sass/login.scss';
 
-const emailRegex = RegExp(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/)
+const emailRegex = RegExp(
+    /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+);
 
-const formValid  = formatError => {
+const formValid  = (formatError,...rest) => {
     let valid = true;
     Object.values(formatError).forEach(val => {
         val.length > 0 && (valid = false)
+    })
+    Object.values(rest).forEach(value => {
+        value==null && (valid = false)
     })
     return valid;
 }
@@ -50,16 +55,16 @@ class bodyleft extends Component{
         let formErrors = this.state.formErrors;
         switch (name) {
             case 'surname':
-                formErrors.surname = value.length < 3 && value.length > 0 ? "minimum 3 characters  surname required" : "";
+                formErrors.surname = value.length <= 3 && value.length > 0 ? "minimum 3 characters  surname required" : "";
                 break;
             case 'firstname':
-                    formErrors.firstname = value.length < 3 && value.length > 0 ? "minimum 3 characters firstname required" : "";
+                    formErrors.firstname = value.length <= 3 && value.length > 0 ? "minimum 3 characters firstname required" : "";
                 break;
             case 'username':
-                formErrors.username = emailRegex.test(value)< 3 && value.length > 0 ? '' : 'invalid email address';
+                formErrors.username = emailRegex.test(value)? '' : 'invalid email address';
                 break;
             case 'password':
-                formErrors.password = value.length < 3 && value.length > 0 ? "minimum 6 characters required" : "";
+                formErrors.password = value.length <= 6 && value.length > 0 ? "minimum 6 characters required" : "";
                 break;
 
         }

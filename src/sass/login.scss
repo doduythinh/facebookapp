@@ -1,6 +1,9 @@
 //@import "./abtracts/mixin";
-@import "src/sass/abtracts/mixin";
+@import "src/component/login_new/body/body";
 @import  "src/sass/abtracts/variable";
+@import "src/component/login_new/body/formlogin/formlogin";
+@import "src/sass/abtracts/mixin";
+@import "src/component/login_new/header/login_new";
 @import "src/component/UI/input/Input";
 @import "src/component/UI/Button/Button";
 @import "src/component/UI/Spinner/Spinner";
