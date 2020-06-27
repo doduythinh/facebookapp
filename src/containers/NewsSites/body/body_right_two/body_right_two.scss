@@ -1,0 +1,70 @@
+
+html{
+  margin: 0px;
+  padding: 0px;
+}
+.bodyright_two{
+  border: 1px solid #dddfe2;
+  width: 18.8rem;
+  height: 69.8rem;
+  float: right;
+  margin-right: 0.1rem;
+  margin-top: -55rem;
+}
+.bodyright_two-page{
+  text-align: left;
+  margin-top: 1rem;
+  margin-left: 0.7rem;
+}
+.bodyright_two_name{
+  font-size: 1rem;
+  font-weight: bold;
+  color: #808080;
+}
+.bodyright_two-contact{
+  text-align: left;
+  margin-top: 4rem;
+  margin-left: 0.7rem;
+}
+.bodyright_two_contact_name{
+  font-size: 1rem;
+  font-weight: bold;
+  color: #808080;
+}
+.bodyright_two-story{
+  text-align: left;
+  margin-top: 53.5rem;
+  margin-left: 0.7rem;
+}
+.bodyright_two-imgcycle{
+  float: left;
+  margin-top: 1rem;
+  margin-left: 0.7rem;
+}
+.image__chat{
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+  cursor: pointer;
+}
+.bodyright_two_name_messenger{
+  display: inline-block;
+  float: right;
+  margin-right: 4.5rem;
+  margin-top: -2.5rem;
+  cursor: pointer;
+  color: #808080;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: inherit;
+}
+.bodyright_two-input{
+  margin-top: 5.5rem;
+  width: 18.7rem;
+  height: 1.7rem;
+  float: left;
+  margin-right: 15rem;
+}

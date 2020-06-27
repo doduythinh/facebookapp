@@ -1,0 +1,151 @@
+*{
+  margin: 0px;
+  padding: 0px;
+
+}
+html{
+  font-size: 75%;
+}
+@include respond(tab-land)
+{
+  .header__bangtin{
+    width: 1280px;
+    background: $color-blue-mot;
+    height: 50px;
+  }
+}
+.header__image{
+  float: left;
+}
+.header__image--logo{
+  width: 5rem;
+  height: 3rem;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+.header__input-search{
+  width: 35rem;
+  height: 2.2rem;
+  float: left;
+  margin-top: 0.8rem;
+  margin-left: 1rem;
+  border-radius: 0.3rem;
+}
+.header__button{
+  float: left;
+}
+.header__button-search{
+  margin-top: 0.8rem;
+  width: 4rem;
+  height: 2.5rem;
+  background-color: #e9ebee;
+  cursor: pointer;
+  &:hover{
+    background: #5a73fc;
+  }
+  margin-right: 10rem;
+  border-radius: 0.3rem;
+}
+.testtimonial__shape{
+  float: right;
+  margin-right: 20rem;
+  display: inline-block;
+}
+.testtimonial__img{
+  width: 4rem;
+  height: 4rem;
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  cursor: pointer;
+}
+.testimonial__caption {
+  float: right;
+  display: inline-block;
+  margin-top: 1.2rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+.testimonial__caption-tc{
+  float: right;
+  display: inline-block;
+  margin-top: 1.2rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-right: -15rem;
+  cursor: pointer;
+}
+.testimonial__caption-t{
+  float: right;
+  display: inline-block;
+  margin-top: 1.2rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-right: -19.5rem;
+  cursor: pointer;
+}
+.testimonial__caption-icon{
+  float: right;
+  display: inline-block;
+  margin-top: 1.4rem;
+  cursor: pointer;
+  margin-right: -38rem;
+
+}
+.icon_logout{
+  width: 1rem;
+  height: 1rem;
+}
+.icon_notification{
+  width: 2rem;
+  height: 1.8rem;
+  margin-right: -60rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  display: inline-block;
+
+}
+.testimonial__icon_notification{
+  float: right;
+}
+.testimonial__icon_userradd{
+  float: right;
+}
+.icon_user{
+  width: 2rem;
+  height: 2rem;
+  margin-right: -45rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  display: inline-block;
+
+}
+.testimonial__icon_messenger{
+  float: right;
+}
+.icon_messenger{
+  width: 2rem;
+  height: 2rem;
+  margin-right: -52.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  display: inline-block;
+
+}
+.testimonial__icon_question{
+  float: right;
+}
+.icon_question{
+  width: 2rem;
+  height: 2rem;
+  margin-right: -67rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  display: inline-block;
+
+}

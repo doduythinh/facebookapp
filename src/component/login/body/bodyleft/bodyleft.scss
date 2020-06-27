@@ -8,197 +8,210 @@ html{
         background-color: lightslategray;
     }
 }
-.bodyleft__account{
-    float: $float-left;
-}
-.bodyleft__label
-{
-    font-size: 2.8rem;
-    font-family: inherit;
-    font-weight: bold;
-    float: $float-right;
-    margin-top: 3rem;
-    margin-right: 33rem;
-    color: $color-black;
-}
-.bodyleft_free
-{
-    margin-top: 0.3rem;
-    font-size: 1.6rem;
-    color:$color-black ;
-    float: $float-right;
-    margin-right: 26rem;
-}
-.bodyleft__firstname{
-    margin-top: 2rem;
-    text-shadow: none;
-    margin-left: 11rem;
-    word-spacing: normal;
-    border-radius: 0.4rem;
-    margin-bottom: 1rem;
-    float: $float-right;
-    height: 2rem;
-    padding: 0.3rem;
-    width: 16.5rem;
-    border: 2px solid #808080;
-    display: $display;
+
+    .bodyleft__account{
+        float: $float-left;
+    }
+    .bodyleft__label
+    {
+        font-size: 2.8rem;
+        font-family: inherit;
+        font-weight: bold;
+        float: $float-right;
+        margin-top: 3rem;
+        margin-right: 33rem;
+        color: $color-black;
+    }
+    .bodyleft_free
+    {
+        margin-top: 0.3rem;
+        font-size: 1.6rem;
+        color:$color-black ;
+        float: $float-right;
+        margin-right: 26rem;
+    }
+    .bodyleft__firstname{
+        margin-top: 2rem;
+        text-shadow: none;
+        margin-left: 11rem;
+        word-spacing: normal;
+        border-radius: 0.4rem;
+        margin-bottom: 1rem;
+        float: $float-right;
+        height: 2rem;
+        padding: 0.3rem;
+        width: 16.5rem;
+        border: 2px solid #808080;
+        display: $display;
 
 
-}
-.bodyleft__surname{
-    margin-top: 2rem;
-    text-shadow: none;
-    word-spacing: normal;
-    border-radius: 0.4rem;
-    margin-left: 1rem;
-    float: $float-right;
-    height: 2rem;
-    width: 16rem;
-    padding: 0.3rem;
-    border: 2px solid #808080;
-    display: inline-block;
+    }
+    .bodyleft__surname{
+        margin-top: 2rem;
+        text-shadow: none;
+        word-spacing: normal;
+        border-radius: 0.4rem;
+        margin-left: 1rem;
+        float: $float-right;
+        height: 2rem;
+        width: 16rem;
+        padding: 0.3rem;
+        border: 2px solid #808080;
+        display: inline-block;
 
 
-}
-.bodyleft__phone{
-    border-radius: 0.4rem;
-    margin-bottom: 1rem;
-    margin-left: 11rem;
-    float: $float-right;
-    height: 2rem;
-    padding: 0.3rem;
-    width: 34.5rem;
-    border: 2px solid #808080;
-}
-.bodyleft__password-new{
-    width: 34.5rem;;
-    height: 2rem;
-    border-radius: 0.4rem;
-    margin-bottom: 1rem;
-    float: $float-right;
-    padding: 0.3rem;
-    porder: 2px solid #808080;
-}
-//.birhdate{
-//    margin-top: 0.2rem;
-//    float: left;
-//}
-.bodyleft__Birthdate-name{
-    font-weight: bold;
-    color: #808080;
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
-    margin-right: 37rem;
-    float: $float-right;
-}
-.bodyleft__Birthdate-option_date{
-    margin-right: -30rem;
-    float: $float-right;
-}
-.bodyleft__day{
-    display: $display;
-    float: $float-right;
-    margin-right: -30rem;
-    padding: 0.5rem;
-    margin-top: 3rem;
-}
-.bodyleft__Month{
-    display: $display;
-    float: $float-right;
-    margin-right: -20rem;
-    padding: 0.5rem;
-    margin-top: 3rem;
-}
-.bodyleft__Year{
-    display: $display;
-    float: $float-right;
-    margin-right: -10rem;
-    padding: 0.5rem;
-    margin-top: 3rem;
+    }
+    .bodyleft__phone{
+        border-radius: 0.4rem;
+        margin-bottom: 1rem;
+        margin-left: 11rem;
+        float: $float-right;
+        height: 2rem;
+        padding: 0.3rem;
+        width: 34.5rem;
+        border: 2px solid #808080;
+    }
+    .bodyleft__password-new{
+        width: 34.5rem;;
+        height: 2rem;
+        border-radius: 0.4rem;
+        margin-bottom: 1rem;
+        float: $float-right;
+        padding: 0.3rem;
+        porder: 2px solid #808080;
+    }
+    //.birhdate{
+    //    margin-top: 0.2rem;
+    //    float: left;
+    //}
+    .bodyleft__Birthdate-name{
+        font-weight: bold;
+        color: #808080;
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+        margin-right: 37rem;
+        float: $float-right;
+    }
+    .bodyleft__Birthdate-option_date{
+        margin-right: -30rem;
+        float: $float-right;
+    }
+    .bodyleft__day{
+        display: $display;
+        float: $float-right;
+        margin-right: -30rem;
+        padding: 0.5rem;
+        margin-top: 3rem;
+    }
+    .bodyleft__Month{
+        display: $display;
+        float: $float-right;
+        margin-right: -20rem;
+        padding: 0.5rem;
+        margin-top: 3rem;
+    }
+    .bodyleft__Year{
+        display: $display;
+        float: $float-right;
+        margin-right: -10rem;
+        padding: 0.5rem;
+        margin-top: 3rem;
 
-}
-.bodyleft__sex{
-    margin-right: 5rem;
-    float: right;
-    margin-right: -26.5rem;
-    margin-top:8rem;
-}
-.sex{
-    margin-right: 6rem;
-    margin-top: 1rem;
-}
+    }
+    .bodyleft__sex{
+        margin-right: 5rem;
+        float: right;
+        margin-right: -26.5rem;
+        margin-top:8rem;
+    }
+    .sex{
+        margin-right: 6rem;
+        margin-top: 1rem;
+    }
 
-.sex-name{
-    float: right;
-    color: #808080;
-    margin-top:-2rem;
-    margin-right: 20rem;
-}
-.bodyleft__female{
-    float: right;
-    margin-top:0.2rem;
-    display: $display;
-    margin-left:  1rem;
-    color: black;
-}
-.bodyleft__Male{
-    float: $float-right;
-    margin-top:0.2rem;
-    display: $display;
-    margin-left:  1rem;
-}
-.bodyleft__Option{
-    float: $float-right;
-    margin-top:0.2rem;
-    display: $display;
-    margin-left:  1rem;
-}
-.Female{
-    float: $float-right;
-    display: $display;
-    margin-left:  1rem;
-    color: black;
-    font-size: 1.5rem;
-}
-.Male{
-    float: $float-right;
-    display: $display;
-    margin-left:  1rem;
-    color: black;
-    font-size: 1.5rem;
-}
-.Option{
-    float: $float-right;
-    display: $display;
-    margin-left:  1rem;
-    color: black;
-    font-size: 1.5rem;
-}
-.bodyleft__button{
-    float: $float-right;
-    margin-right: -17rem;
-    margin-top: 12rem;
-}
-.Button_SignIn{
-    font-family: inherit;
-    border-radius: 0.7rem;
-    width: 17rem;
-    height: 3.5rem;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    background-color: #69a74e;
-    background: linear-gradient(#67ae55, #578843);
-    box-shadow: inset 0 1px 1px #a4e388;
-    border-color: #3b6e22 #3b6e22 #2c5115;
-    text-decoration: none;
-    cursor: pointer;
-}
-.errorMessage {
-    color: red;
-    font-size: 1.1em;
-    position: absolute;
-    float: $float-right;
-}
+    .sex-name{
+        float: right;
+        color: #808080;
+        margin-top:-2rem;
+        margin-right: 20rem;
+    }
+    .bodyleft__female{
+        float: right;
+        margin-top:0.2rem;
+        display: $display;
+        margin-left:  1rem;
+        color: black;
+    }
+    .bodyleft__Male{
+        float: $float-right;
+        margin-top:0.2rem;
+        display: $display;
+        margin-left:  1rem;
+    }
+    .bodyleft__Option{
+        float: $float-right;
+        margin-top:0.2rem;
+        display: $display;
+        margin-left:  1rem;
+    }
+    .Female{
+        float: $float-right;
+        display: $display;
+        margin-left:  1rem;
+        color: black;
+        font-size: 1.5rem;
+    }
+    .Male{
+        float: $float-right;
+        display: $display;
+        margin-left:  1rem;
+        color: black;
+        font-size: 1.5rem;
+    }
+    .Option{
+        float: $float-right;
+        display: $display;
+        margin-left:  1rem;
+        color: black;
+        font-size: 1.5rem;
+    }
+    .bodyleft__button{
+        float: $float-right;
+        margin-right: -17rem;
+        margin-top: 12rem;
+    }
+    .Button_SignIn{
+        font-family: inherit;
+        border-radius: 0.7rem;
+        width: 17rem;
+        height: 3.5rem;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        background-color: #69a74e;
+        background: linear-gradient(#67ae55, #578843);
+        box-shadow: inset 0 1px 1px #a4e388;
+        border-color: #3b6e22 #3b6e22 #2c5115;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .errorMessage {
+        color: red;
+        font-size: 1.1em;
+        position: absolute;
+        float: $float-right;
+        margin-top: 0.5rem;
+        margin-right: -25rem;
+    }
+    .errorMessagesurname {
+        color: red;
+        font-size: 1.1em;
+        position: absolute;
+        margin-right: -2rem;
+        float: $float-right;
+        margin-top: 0.5rem;
+    }
+
+
 
 

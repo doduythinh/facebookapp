@@ -1,0 +1,115 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+.body_left_two{
+   font-size: 65%;
+}
+.body_left_two-status{
+  float: left;
+  width: 40.5rem;
+  height: 15rem;
+  background: white;
+  border: 1px solid #dddfe2;
+  margin-left: 18rem;
+  margin-top: -54rem;
+  border-radius: 0.4rem;
+}
+.body_left_two_sites{
+  width: 40.5rem;
+  height: 2.5rem;
+  background: linear-gradient(#fff, #e9ebee);
+  border-bottom: 1px solid #dddfe2;
+}
+.body_left_two__name__sites{
+  float: left;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 0.5rem;
+  margin-top: 0.3rem;
+  color: #808080;
+}
+.body_left_two_stattus__writes{
+  float: left;
+}
+.body_left_two_stattus__img{
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  cursor: pointer;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-left: 0.8rem;
+}
+.body_left_two_stattus__think{
+  float: right;
+  margin-top: 2rem;
+  margin-left: 1.3rem;
+  font-size: 1.2rem;
+
+}
+.body_left_two_stattus__space{
+  float: left;
+}
+.body_left_two_status__office
+{
+  float: left;
+  padding: 1rem 1.5rem;
+  margin-top: 9rem;
+  margin-left: -18rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(#fff, #e9ebee);
+  cursor: pointer;
+}
+.body_left_two_status__video {
+  float: left;
+  padding: 1rem 1rem;
+  margin-top: 9rem;
+  margin-left: -10rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(#fff, #e9ebee);
+  cursor: pointer;
+  color: black;
+  font-size: 1rem;
+}
+.body_left_two_status__friends{
+  float: left;
+  padding: 1rem 5rem;
+  margin-top: 9rem;
+  margin-left: -2rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(#fff, #e9ebee);
+  cursor: pointer;
+}
+.body_left_two-meeting{
+  float: left;
+  width: 40.5rem;
+  height: 6rem;
+  background: white;
+  border: 1px solid #dddfe2;
+  margin-top: -38rem;
+  margin-left: 18rem;
+  border-radius: 0.4rem;
+}
+.body_left_two-story{
+  float: left;
+  width: 40.5rem;
+  height: 20rem;
+  background: white;
+  border: 1px solid #dddfe2;
+  margin-top: -31rem;
+  margin-left: 18rem;
+  border-radius: 0.4rem;
+}
+.body_left_two-newssites{
+  float: left;
+  width: 40.5rem;
+  height: 40rem;
+  background: white;
+  border: 1px solid #dddfe2;
+  margin-top: -10rem;
+  margin-left: 18rem;
+  border-radius: 0.4rem;
+}
