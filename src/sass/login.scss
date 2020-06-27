@@ -1,8 +1,13 @@
-//@import "./abtracts/mixin";
-@import "src/component/login_new/body/body";
-@import  "src/sass/abtracts/variable";
-@import "src/component/login_new/body/formlogin/formlogin";
+@import "src/containers/NewsSites/body/body_left_one/body_left_one";
+@import "src/containers/NewsSites/body/body_left_two/body_left_two";
 @import "src/sass/abtracts/mixin";
+@import "src/containers/NewsSites/body/body_right_one/body_right_one";
+@import "src/containers/NewsSites/body/body_right_two/body_right_two";
+@import "src/containers/NewsSites/body/body";
+@import  "src/sass/abtracts/variable";
+@import "src/component/login_new/body/body";
+@import "src/containers/NewsSites/header/header";
+@import "src/component/login_new/body/formlogin/formlogin";
 @import "src/component/login_new/header/login_new";
 @import "src/component/UI/input/Input";
 @import "src/component/UI/Button/Button";

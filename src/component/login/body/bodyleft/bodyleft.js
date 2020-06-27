@@ -82,7 +82,7 @@ class bodyleft extends Component{
                         <input className="bodyleft__surname" type="text" name="surname" placeholder="Họ"
                                onChange={this.handleChange}
                             />
-                        {formErrors.surname.length>0 && (<span className="errorMessage">{formErrors.surname}</span>)}
+                        {formErrors.surname.length>0 && (<span className="errorMessagesurname">{formErrors.surname}</span>)}
                         <input className="bodyleft__firstname" type="text" name="firstname" placeholder="Tên"
                                onChange={this.handleChange}
                        />

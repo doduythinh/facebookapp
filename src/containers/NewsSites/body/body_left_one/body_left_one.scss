@@ -1,0 +1,133 @@
+html{
+  font-size: 75%;
+}
+*{
+  padding: 0px;
+  margin: 0px;
+}
+.body_left_one{
+  float: right;
+  //margin-top: 1.5rem;
+  //border: 1px solid red;
+  //width: 15rem;
+  //height: 70rem;
+  //margin-right: 35rem;
+}
+.body_left_one-mot{
+  margin-top: 1rem;
+  width: 15rem;
+  height: 54rem;
+  margin-right: 42rem;
+}
+//.body_left_one-hai{
+//  margin-top: 1rem;
+//  border: 1px solid red;
+//  width: 15rem;
+//  height: 18rem;
+//  margin-right: 42rem;
+//}
+//.body_left_one-ba{
+//  margin-top: 1rem;
+//  border: 1px solid red;
+//  width: 15rem;
+//  height: 18rem;
+//  margin-right: 42rem;
+//}
+.body_left_one-mot_img{
+  width: 2.5rem;
+  height: 2.5rem;
+  float: left;
+  margin-left: 1.2rem;
+  display: inline-block;
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  cursor: pointer;
+}
+.name_thor{
+  display: inline-block;
+  cursor: pointer;
+  float: left;
+  margin-top: 0.7rem;
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+}
+.name_BangTin{
+  float: left;
+  margin-top: 1.5rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+
+}
+.name_messenger{
+  float: left;
+  margin-top: 4rem;
+  margin-left: -4.5rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+
+}
+.name_Watch{
+  float: left;
+  margin-top: 6.5rem;
+  margin-left: -5.8rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.name_Marketplace{
+  float: left;
+  margin-top: 9rem;
+  margin-left: -5.8rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.name_LoiTat{
+  float: left;
+  margin-top: 12.5rem;
+  cursor: pointer;
+  margin-left: -8.5rem;
+  font-size: 1.2rem;
+  color: #808080;
+  font-weight: bold;
+}
+.name_KhamPha{
+  float: left;
+  margin-top: 23.5rem;
+  cursor: pointer;
+  margin-left: -8.5rem;
+  font-size: 1.2rem;
+  color: #808080;
+  font-weight: bold;
+}
+.name_SuKien{
+  float: left;
+  margin-top: 25.5rem;
+  cursor: pointer;
+  margin-left: -7rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.name_Trang{
+  float: left;
+  margin-top: 28.5rem;
+  cursor: pointer;
+  margin-left: -7rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.name_chiendich{
+  float: left;
+  margin-top: 21rem;
+  cursor: pointer;
+  margin-left: 3.5rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.name_MessenNhi{
+  float: left;
+  margin-top: 1.2rem;
+  cursor: pointer;
+  margin-left: 3.5rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}

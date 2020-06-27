@@ -15,7 +15,7 @@ class Header extends Component{
         return (
             <div className="header">
                 <div className="header__facebook">
-                    <a href="#" className="header__facebook_name">facebook</a>
+                   <a href="#" className="header__facebook_name">facebook</a>
                 </div>
                 <div className="header_three">
                     <div className="header__Email">
