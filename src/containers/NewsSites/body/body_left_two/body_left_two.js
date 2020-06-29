@@ -3,7 +3,11 @@ import login from '../../../../sass/login.scss';
 import thanos from '../../../../asset/img/thor.jpg';
 import thanos1 from '../../../../asset/img/thanos1.jpg';
 import avenger from '../../../../asset/img/background.jpg';
-import {FaGlobeAmericas,AiOutlineLike,FaRegCommentAlt,RiShareForwardLine,RiMoreLine } from "react-icons/all";
+import {FaGlobeAmericas,
+    AiOutlineLike,
+    FaRegCommentAlt,
+    RiShareForwardLine,
+    RiMoreLine,FcVideoCall } from "react-icons/all";
 class body_left_two extends Component{
     render() {
         return(
@@ -18,7 +22,9 @@ class body_left_two extends Component{
                     </div>
                     <div className="body_left_two_stattus__space">
                         {/*<a className="body_left_two_gachtren"><hr /></a>*/}
-                        <a href="#" className="body_left_two_status__office">Tạo Phòng h...</a>
+                        <a href="#" className="body_left_two_status__office">
+                            <FcVideoCall className="FcVideoCall" /><span className="nam_tao_phong">Tạo Phòng h...</span>
+                        </a>
                         <a href="#" className="body_left_two_status__video">Ảnh/Video</a>
                         <a href="#" className="body_left_two_status__friends">Gắn thẻ bạn bè</a>
                         <a href="#" className="body_left_two_status__bacham">...</a>
