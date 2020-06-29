@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import login from '../../../../sass/login.scss';
 import thor from '../../../../asset/img/thor.jpg';
-import { FaPlusSquare } from 'react-icons/fa';
+import { FaPlusSquare,FcGlobe } from "react-icons/all";
 class body_left_one extends Component{
     render() {
         return(
@@ -9,7 +9,7 @@ class body_left_one extends Component{
                 <div className="body_left_one-mot">
                     <img src={thor}  className="body_left_one-mot_img"/>
                     <p className="name_thor">Nguyễn Văn Thor</p>
-                    <p className="name_BangTin">Bảng tin</p>
+                    <FcGlobe className="FcGlobe"  /><p className="name_BangTin">Bảng tin</p>
                     <p className="name_messenger">Messenger</p>
                     <p className="name_Watch">Watch</p>
                     <p className="name_Marketplace">Marketplace</p>
