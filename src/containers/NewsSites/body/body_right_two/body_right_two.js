@@ -1,10 +1,18 @@
 import React, {Component} from "react";
 import login from '../../../../sass/login.scss';
 import imagethor from '../../../../asset/img/thor.jpg';
-import {BsSearch} from "react-icons/all";
+import { BsSearch,
+    AiTwotoneSetting,
+    BsPencilSquare
+    ,MdGroup,
+    RiLiveLine
+} from "react-icons/all";
+
 
 class body_right_two extends Component{
+
     render() {
+        let  emailIcon = <BsSearch  size={4}  />;
         return(
             <div className="bodyright_two">
                 <div className="bodyright_two-page">
@@ -26,7 +34,11 @@ class body_right_two extends Component{
                     <p className="bodyright_two_contact_name">CUỘC TRÒ CHUYỆN NHÓM </p>
                 </div>
                 <div>
-                    <input className="bodyright_two-input"  placeholder="Tìm kiếm" />
+                    <AiTwotoneSetting className="AiTwotoneSetting" />
+                    <BsPencilSquare />
+                    <MdGroup />
+                    <RiLiveLine />
+                    <input className="bodyright_two-input" placeholder={emailIcon} type="text" placeholder="Tìm kiếm" />
                 </div>
             </div>
         )

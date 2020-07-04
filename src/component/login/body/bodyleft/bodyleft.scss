@@ -93,8 +93,10 @@ html{
         float: $float-right;
     }
     .bodyleft__Birthdate-option_date{
-        margin-right: -30rem;
+        margin-right: -12rem;
         float: $float-right;
+        margin-top: 3rem;
+        height: 2rem;
     }
     .bodyleft__day{
         display: $display;

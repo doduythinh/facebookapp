@@ -7,7 +7,11 @@ import {FaGlobeAmericas,
     AiOutlineLike,
     FaRegCommentAlt,
     RiShareForwardLine,
-    RiMoreLine,FcVideoCall } from "react-icons/all";
+    RiMoreLine,FcVideoCall,
+    FcAddImage,
+    FcPortraitMode
+} from "react-icons/all";
+// import body_left_two_newsites from './body_left_two_newsites/body_left_two_newsites';
 class body_left_two extends Component{
     render() {
         return(
@@ -23,10 +27,14 @@ class body_left_two extends Component{
                     <div className="body_left_two_stattus__space">
                         {/*<a className="body_left_two_gachtren"><hr /></a>*/}
                         <a href="#" className="body_left_two_status__office">
-                            <FcVideoCall className="FcVideoCall" /><span className="nam_tao_phong">Tạo Phòng h...</span>
+                            <FcVideoCall className="FcVideoCall" /><span className="name_tao_phong">Tạo Phòng h...</span>
                         </a>
-                        <a href="#" className="body_left_two_status__video">Ảnh/Video</a>
-                        <a href="#" className="body_left_two_status__friends">Gắn thẻ bạn bè</a>
+                        <a href="#" className="body_left_two_status__video">
+                            <FcAddImage className="FcAddImage" /><span className="name_Video">Ảnh/Video</span>
+                        </a>
+                        <a href="#" className="body_left_two_status__friends">
+                            <FcPortraitMode className="FcPortraitMode" /><span className="name_friends">Gắn thẻ bạn bè</span>
+                        </a>
                         <a href="#" className="body_left_two_status__bacham">...</a>
                     </div>
                 </div>
@@ -38,8 +46,10 @@ class body_left_two extends Component{
                 <div className="body_left_two-story">
                     <p className="body_left_two-story--name">Tin</p>
                     <a href="#" className="body_left_two-story--se_All">Xem Tất Cả</a>
-                    <img  src={thanos} className="body_left_two-story--img"/>
-                    <p className="body_left_two-story--name-def">Nguyễn Văn Thor</p>
+                    <div>
+                        <img  src={thanos} className="body_left_two-story--img"/>
+                        <p className="body_left_two-story--name-def">Thêm vào tin</p>
+                    </div>
                 </div>
                 <div className="body_left_two-newssites">
                     <img  src={thanos1}  className="body_left_two-newssites-img"/>
@@ -50,9 +60,9 @@ class body_left_two extends Component{
                     </p>
                     <img src={avenger} className="body_left_two-newssites-img_dangtin"/>
                     <div className="like_share_comment">
-                        <p className="body_left_two-newssites_like"><AiOutlineLike  className="like" />Thích </p>
-                        <p className="body_left_two-newssites_comment"><FaRegCommentAlt className="comment" />Bình Luận </p>
-                        <p className="body_left_two-newssites_share"><RiShareForwardLine className="share" />Chia sẻ</p>
+                        <AiOutlineLike  className="like" /><p className="body_left_two-newssites_like">Thích </p>
+                        <FaRegCommentAlt className="comment" /><p className="body_left_two-newssites_comment">Bình Luận </p>
+                        <RiShareForwardLine className="share" /><p className="body_left_two-newssites_share">Chia sẻ</p>
                     </div>
                 </div>
             </div>
