@@ -37,10 +37,16 @@ class body_right_one extends Component{
                         <button className="bodyright_one_page-boderbottom-interact_view">Số lượt xem</button>
                         <button className="bodyright_one_page-boderbottom-interact_view">Bài viết</button>
                     </div>
+                    <div className="bodyright_one_page-boderbottom-promote">
+                        <button className="bodyright_one_page-boderbottom_create-promote">Tạo Quảng Cáo</button>
+                    </div>
                 </div>
                 <div className="bodyright_one_stream">
+                    <p className="bodyright_one_stream-name" >Video chơi game</p>
                 </div>
                 <div className="bodyright_one_promote">
+                    <p className="bodyright_one_stream-founder" >Được tài trợ</p>
+                    <a href="#" className="bodyright_one_stream-nampromote">Tạo quảng cáo</a>
                 </div>
                 <div className="bodyright_one_language">
                 </div>

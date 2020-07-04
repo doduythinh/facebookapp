@@ -72,11 +72,13 @@ html{
   margin-left: 10rem;
   float: left;
   margin-top: -6.5rem;
+  cursor: pointer;
 }
 .bodyright_one_page-boderbottom_name_notification{
   margin-left: 10rem;
   float: left;
   margin-top: -3.5rem;
+  cursor: pointer;
 }
 .global{
   float: left;
@@ -84,6 +86,7 @@ html{
   height: 1.5rem;
   margin-left: 8rem;
   margin-top: -4rem;
+  cursor: pointer;
 }
 .Comment{
   float: left;
@@ -91,6 +94,7 @@ html{
   height: 1.5rem;
   margin-left: 8rem;
   margin-top: -6.5rem;
+  cursor: pointer;
 }
 .bodyright_one_page-boderbottom-Dang{
   margin-top: 5rem;
@@ -127,11 +131,9 @@ html{
   cursor: pointer;
 }
 .bodyright_one_page-boderbottom_name_Image{
-  margin-top: -2.5rem;
+  margin-top: -1.5rem;
   float: left;
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-left: 8rem;
+  margin-left: 7rem;
   text-decoration: none;
   font-size: 1rem;
   font-family: inherit;
@@ -150,11 +152,9 @@ html{
   cursor: pointer;
 }
 .bodyright_one_page-boderbottom_name_direct{
-  margin-top: -2.5rem;
+  margin-top: -1.5rem;
   float: left;
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-left: 13rem;
+  margin-left: 12rem;
   text-decoration: none;
   font-size: 1rem;
   font-family: inherit;
@@ -175,7 +175,7 @@ html{
 }
 .bodyright_one_page-boderbottom_name_Moi
 {
-  margin-top: -2.5rem;
+  margin-top: -1.5rem;
   float: left;
   width: 1.5rem;
   height: 1.5rem;
@@ -230,7 +230,20 @@ html{
   }
   border: 1px solid #dddfe2;
 }
-
+.bodyright_one_page-boderbottom-promote{
+  margin-top: 1rem;
+  border-top: 1px solid #808080;
+}
+.bodyright_one_page-boderbottom_create-promote{
+  margin-top: 0.5rem;
+  width: 19rem;
+  height: 2.5rem;
+  float: left;
+  margin-left: 1rem;
+  cursor: pointer;
+  background: linear-gradient(#f5f6f7, #e9ebee);
+  border: 1px solid #f5f6f7;
+}
 
 
 .bodyright_one_stream{
@@ -242,6 +255,14 @@ html{
     margin-left: 2.5rem;
     border-radius: 0.4rem;
 }
+.bodyright_one_stream-name{
+  float: left;
+  margin-left:  3rem;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+
 .bodyright_one_promote{
     border: 1px solid #dddfe2;
     margin-top: 1rem;
@@ -250,6 +271,21 @@ html{
     height: 40rem;
     margin-left: 2.5rem;
     border-radius: 0.4rem;
+}
+.bodyright_one_stream-founder{
+  float: left;
+  margin-left: 0.8rem;
+  font-size: 1.2rem;
+}
+.bodyright_one_stream-nampromote{
+  float: right;
+  margin-right: 0.8rem;
+  text-decoration: none;
+  color: cornflowerblue;
+  font-size: 1.2rem;
+  &:hover{
+    text-decoration: underline;
+  }
 }
 .bodyright_one_language{
     border: 1px solid #dddfe2;

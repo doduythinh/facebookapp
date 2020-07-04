@@ -4,14 +4,14 @@ import avartar from '../../../asset/img/thor.jpg';
 import login from '../../../sass/login.scss';
 import { BsSearch,AiFillCaretDown,BsFillBellFill,
     FaUserFriends,FaFacebookMessenger,
-    BsFillQuestionCircleFill,AiFillFacebook } from "react-icons/all";
+    BsFillQuestionCircleFill,GrFacebook } from "react-icons/all";
 
 class header extends Component{
     render() {
         return(
             <div className="header__bangtin" >
                 <div className="header__image">
-                    <img src={logofacebook}  className="header__image--logo"  />
+                    <GrFacebook  className="header__image--logo"  color="white" />
                 </div>
                 <div className="header__input">
                    <input type="text" className="header__input-search" placeholder="Tìm kiếm" />

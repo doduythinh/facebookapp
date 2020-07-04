@@ -61,9 +61,8 @@
 .body_left_two_status__office
 {
   border-top: 1px solid #e9ebee;
-  margin: 0 12px;
   float: left;
-  margin-top: 8.8rem;
+  margin-top: 8.5rem;
   margin-left: -19rem;
   border-radius: 1.5rem;
   background: linear-gradient(#fff, #e9ebee);
@@ -73,6 +72,7 @@
   text-decoration: none;
   width: 10.5rem;
   height: 3rem;
+  display: inline-block;
 }
 .FcVideoCall{
   width: 2rem;
@@ -81,13 +81,35 @@
   margin-left: 1rem;
   margin-top: 0.5rem;
 }
-.nam_tao_phong{
+.FcAddImage{
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-left: 1rem;
+  margin-top: 0.6rem;
+  float: left;
+}
+.FcPortraitMode{
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-left: 1rem;
+  margin-top: 0.8rem;
+  float: left;
+}
+.name_friends{
   float: left;
   margin-top: 0.8rem;
 }
+.name_tao_phong{
+  float: left;
+  margin-top: 0.8rem;
+}
+.name_Video{
+  float: left;
+  margin-top: 0.8rem;
+}
+
 .body_left_two_status__video {
   float: left;
-  padding: 1rem 2rem;
   margin-top: 8.5rem;
   margin-left: -7rem;
   border-radius: 1.5rem;
@@ -96,10 +118,12 @@
   color: black;
   font-size: 1rem;
   text-decoration: none;
+  display: inline-block;
+  width: 10.5rem;
+  height: 3rem;
 }
 .body_left_two_status__friends{
   float: left;
-  padding: 1rem 2rem;
   margin-top: 8.5rem;
   margin-left: 1rem;
   border-radius: 1.5rem;
@@ -108,11 +132,14 @@
   color: black;
   font-size: 1rem;
   text-decoration: none;
+  display: inline-block;
+  width: 10.5rem;
+  height: 3rem;
 }
 .body_left_two_status__bacham{
   float: left;
   padding: 1rem 2rem;
-  margin-top: 8.5rem;
+  margin-top: 8.3rem;
   margin-left: 1rem;
   border-radius: 1.5rem;
   background: linear-gradient(#fff, #e9ebee);
@@ -121,6 +148,7 @@
   font-size: 1rem;
   text-transform: uppercase;
   text-decoration: none;
+  display: inline-block;
 }
 
 
@@ -199,7 +227,7 @@
   border-radius: 1rem;
   transition: all 0.5s;
   position: relative;
-  z-index: inherit;
+  z-index: 1;
   &:hover{
     //transform: scale(1.1);
     -webkit-transform: scale(1.02);
@@ -209,8 +237,10 @@
 .body_left_two-story--name-def{
   float: left;
   margin-top: 18rem;
+  margin-left: 1rem;
   font-size: 1rem;
   font-family: inherit;
+  color: white;
 }
 
 .body_left_two-newssites{
@@ -275,39 +305,56 @@
 }
 .body_left_two-newssites_like {
   float: left;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   font-size: 1.1rem;
   font-weight: bold;
   font-family: inherit;
   color: #808080;
-  margin-left: 4rem;
+  margin-left: 0.2rem;
   display: block;
   cursor: pointer;
 }
 .body_left_two-newssites_comment {
   float: left;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   font-size: 1.1rem;
   font-weight: bold;
   font-family: inherit;
   color: #808080;
-  margin-left: 6rem;
+  margin-left: 1rem;
   display: block;
   cursor: pointer;
 }
 .body_left_two-newssites_share{
   float: left;
-  margin-top: 1.5rem;
+  margin-top: 1.7rem;
   font-size: 1.1rem;
   font-weight: bold;
   font-family: inherit;
   color: #808080;
-  margin-left: 4rem;
+  margin-left: 0.2rem;
   display: block;
   cursor: pointer;
 }
+.comment{
+  float: left;
+  margin-left: 5rem;
+  margin-top:1.5rem ;
+  width: 2.5rem;
+  height: 2rem;
+}
 .like{
-  margin-left: 1rem;
+  margin-top:1.5rem ;
+  width: 3rem;
+  height: 2rem;
+  margin-left: 4rem;
+  float: left;
+}
+.share{
+  margin-top:1.5rem ;
+  width: 3rem;
+  height: 2rem;
+  margin-left: 4rem;
   float: left;
 }
 .RiMoreLine{
