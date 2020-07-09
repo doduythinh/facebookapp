@@ -1,26 +1,20 @@
-*{
-    padding: 0px;
-    margin: 0px;
+@media (min-width: 450px) {
+    .bodyleft{
+        float: right;
+        margin-right: 5rem;
+        margin-top: 4rem;
+        width: 45rem;
+        height: 45rem;
+    }
 }
 html{
-    font-size: 65%;
+    font-size: 77%;
+    box-sizing: border-box;
 }
-.bodyright__image
-{
-    position: relative;
+.bodyleft_Signup{
+    font-weight: bold;
+    font-size: 2.8rem;
+    font-family: inherit;
     float: left;
-    margin-left: -45rem;
-    margin-top: 10rem;
-}
-.bodyright{
-    .bodyright__label
-    {
-        float: left;
-        padding: 9rem;
-        margin-top: -5rem;
-        font-weight: bold;
-        font-family: inherit;
-        font-size: $default-font-size;
-        color: $color-blue-mot;
-    }
+    margin-left: 5.5rem;
 }

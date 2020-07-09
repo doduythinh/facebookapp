@@ -1,55 +1,3 @@
-.Input{
-  .bodyleft__firstname{
-    margin-top: 2rem;
-    text-shadow: none;
-    margin-left: 11rem;
-    word-spacing: normal;
-    border-radius: 0.4rem;
-    margin-bottom: 1rem;
-    float: right;
-    height: 2rem;
-    padding: 0.3rem;
-    width: 16.5rem;
-    border: 2px solid #808080;
-    display: inline-block;
-
-
-  }
-  .bodyleft__surname{
-    margin-top: 2rem;
-    text-shadow: none;
-    word-spacing: normal;
-    border-radius: 0.4rem;
-    margin-left: 1rem;
-    float: right;
-    height: 2rem;
-    width: 16rem;
-    padding: 0.3rem;
-    border: 2px solid #808080;
-    display: inline-block;
-
-
-  }
-  .bodyleft__phone{
-    border-radius: 0.4rem;
-    margin-bottom: 1rem;
-    margin-left: 11rem;
-    float: right;
-    height: 2rem;
-    padding: 0.3rem;
-    width: 34.5rem;
-    border: 2px solid #808080;
-  }
-  .bodyleft__password-new{
-    width: 34.5rem;;
-    height: 2rem;
-    border-radius: 0.4rem;
-    margin-bottom: 1rem;
-    float: right;
-    padding: 0.3rem;
-    porder: 2px solid #808080;
-  }
-}
 .Input {
   width: 100%;
   padding: 10px;
@@ -66,11 +14,10 @@
   border: 1px solid #ccc;
   background-color: white;
   font: inherit;
-  padding: 6px 10px;
+  padding: 7px 24px;
   display: block;
   width: 100%;
 }
-
 .InputElement:focus{
   outline: none;
   background-color: #ccc ;
@@ -78,4 +25,84 @@
 .Invalid {
   border: 1px solid red;
   background-color: #FDA49A;
+}
+.inputPassword{
+  outline: none;
+  border: 1px solid #ccc;
+  background-color: white;
+  font: inherit;
+  height: 3rem;
+  display: block;
+  width: 35rem;
+  border-radius: 0.3rem;
+  margin-left: 5rem;
+  margin-top: -1rem;
+}
+.inputPhone{
+  outline: none;
+  border: 1px solid #ccc;
+  background-color: white;
+  font: inherit;
+  margin-top: 4rem;
+  height: 3rem;
+  display: block;
+  width: 35rem;
+  border-radius: 0.3rem;
+  margin-left: 5rem;
+}
+.inputFirt_name{
+  outline: none;
+  border: 1px solid #ccc;
+  background-color: white;
+  font: inherit;
+  height: 3rem;
+  display: inline-block;
+  width: 17rem;
+  border-radius: 0.3rem;
+  float: left;
+  margin-left: -10.7rem;
+  margin-top: 3.5rem;
+}
+.inputLast_name{
+  outline: none;
+  border: 1px solid #ccc;
+  background-color: white;
+  font: inherit;
+  display: inline-block;
+  width: 17rem;
+  height: 3rem;
+  border-radius: 0.3rem;
+  float: left;
+  margin-left: 1rem;
+  margin-top: 1.8rem;
+}
+.inputDate{
+  outline: none;
+  border: 1px solid #ccc;
+  background-color: white;
+  font: inherit;
+  height: 3rem;
+  display: block;
+  width: 35rem;
+  border-radius: 0.3rem;
+  margin-left: 5rem;
+}
+.inputFemale{
+float: left;
+
+  display: inline-block;
+  margin-left: 5rem;
+}
+.inputMale{
+  float: left;
+  margin-left: 12rem;
+  display: inline-block;
+  margin-top: -1.5rem;
+
+}
+.inputOption{
+  float: left;
+  margin-top: -3rem;
+  margin-left: 20rem;
+  display: inline-block;
 }
