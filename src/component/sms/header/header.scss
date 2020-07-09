@@ -1,0 +1,29 @@
+.header_sms{
+  @media (max-width: 1280px){
+    height: 52px;
+    background-color: $color-blue-mot;
+    border-bottom: 1px solid $color-blue-mot;
+    cursor: pointer;
+    width: 1280px;
+  }
+}
+.header__icon{
+  float: left;
+}
+.header__logo{
+  width: 5rem;
+  height: 2.5rem;
+  margin-left: 15rem;
+  margin-top: 0.8rem;
+  cursor: pointer;
+}
+.header__logout{
+  float: right;
+}
+.header__logo_logout{
+  width: 3rem;
+  height: 1.5rem;
+  margin-right: 15rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}

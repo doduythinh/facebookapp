@@ -1,5 +1,11 @@
 @import  "src/sass/abtracts/variable";
-//@import "src/containers/NewsSites/body/body_left_two/body_left_two_newsites/body_left-two_newsites";
+@import "src/component/sms/body/bodysms/bodysms";
+@import "src/component/sms/header/header";
+@import "src/component/sms/footer/footer";
+@import "src/component/sms/body/body";
+@import "src/component/UI/input/Input";
+@import "src/component/UI/Button/Button";
+@import "src/component/UI/Spinner/Spinner";
 @import "src/containers/NewsSites/body/body_left_one/body_left_one";
 @import "src/containers/NewsSites/body/body_left_two/body_left_two";
 @import "src/sass/abtracts/mixin";
@@ -10,10 +16,7 @@
 @import "src/containers/NewsSites/header/header";
 @import "src/component/login_new/body/formlogin/formlogin";
 @import "src/component/login_new/header/login_new";
-@import "src/component/UI/input/Input";
-@import "src/component/UI/Button/Button";
-@import "src/component/UI/Spinner/Spinner";
-@import "src/component/login/body/bodyleft/bodyleft";
-@import "src/component/login/body/bodyright/bodyright";
+@import "../component/login/body/bodyleft/bodyleft";
+@import "../component/login/body/bodyright/bodyright";
 @import "src/component/login/header/header";
 @import "src/component/login/body/body";

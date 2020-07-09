@@ -21,7 +21,7 @@ export function* userSignin(action) {
         password: action.password.toString()
     }
     console.log(authData);
-    let url = 'signin';
+    let url = 'users/signin';
     try{
         let response = yield axios.post(url,authData);
         console.log(response);
@@ -31,16 +31,17 @@ export function* userSignin(action) {
 
 }
 export  function* userSignup(action) {
+    console.log('action', action);
     yield put(actions.loginAuthstart())
     const authData = {
         first_name:action.first_name.toString(),
         last_name:action.last_name.toString(),
         phone: action.phone.toString(),
-        password:action.password.toString(),
-        bird_date: action.bird_date,
-        gender:action.gender.toString()
+        password: action.password.toString(),
+        bird_date: new Date(action.bird_date).getTime(),
+        gender: parseInt(action.gender)
     }
-    let url = 'signup';
+    let url = 'users/signup';
     try {
         let response = yield  axios.post(url,authData);
         console.log(response);

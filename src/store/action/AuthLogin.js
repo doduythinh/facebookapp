@@ -32,15 +32,14 @@ export const AuthUserSignIn = (phone,password,isSignup) => {
         isSignup: isSignup
     }
 }
-export const AuthUserSignnUp = (first_name,phone,last_name,
-                                password,bird_date,gender,isSignup) => {
+export const AuthUserSignnUp = (first_name,last_name,phone,password,
+                                bird_date,gender) => {
     return {
         type:actionsTypes.AUTH_USERSIGNUP,
-        phone:phone,
         first_name:first_name,
         last_name:last_name,
+        phone:phone,
         password:password,
-        isSignup:isSignup,
         bird_date:bird_date,
         gender:gender
     }
