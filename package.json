@@ -33,7 +33,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sasstocss": "node-sass src/sass/login.scss css/login.css -w"
+    "sasstocss": "node-sass src/sass/main.scss css/login.css -w"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import login from '../../../../sass/login.scss';
+import login from '../../../../sass/main.scss';
 import thanos from '../../../../asset/img/thor.jpg';
 import thanos1 from '../../../../asset/img/thanos1.jpg';
 import avenger from '../../../../asset/img/background.jpg';

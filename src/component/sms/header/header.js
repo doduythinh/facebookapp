@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import { GrFacebook,AiFillCaretDown } from "react-icons/all";
-import login from '../../../sass/login.scss';
+import login from '../../../sass/main.scss';
 class header extends Component{
 
     render() {

@@ -1,6 +1,6 @@
 import React,{ Component }  from 'react';
 import anhfacebook from "../../../../asset/img/anhfacebook.png";
-import Bodyright from '../../../../sass/login.scss';
+import Bodyright from '../../../../sass/main.scss';
 class bodyleft extends Component{
     render() {
         return(

@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import logofacebook from '../../../asset/img/facebook-logo.png';
 import avartar from '../../../asset/img/thor.jpg';
-import login from '../../../sass/login.scss';
+import login from '../../../sass/main.scss';
 import { BsSearch,AiFillCaretDown,BsFillBellFill,
     FaUserFriends,FaFacebookMessenger,
     BsFillQuestionCircleFill,GrFacebook } from "react-icons/all";
