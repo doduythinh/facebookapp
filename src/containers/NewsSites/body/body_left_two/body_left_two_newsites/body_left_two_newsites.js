@@ -7,7 +7,7 @@ import {FaGlobeAmericas,
     RiShareForwardLine,
     RiMoreLine,
 } from "react-icons/all";
-import login from '../../../../../sass/login.scss';
+import login from '../../../../../sass/main.scss';
 class body_left_two_newsites extends Component{
     render() {
         return(

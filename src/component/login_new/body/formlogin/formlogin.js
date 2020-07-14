@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import login from '../../../../sass/login.scss';
+import login from '../../../../sass/main.scss';
 class formlogin extends Component{
     render() {
         return(

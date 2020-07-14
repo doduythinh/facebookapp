@@ -3,7 +3,8 @@ import Header from "../header/header";
 import Footer from "../footer/footer";
 import Bodyright from "./bodyright/bodyright";
 import Bodyleft from "./bodyleft/bodyleft";
-import Body from './body.scss'
+import Body from '../../../sass/main.scss';
+// import Body1 from './body.scss';
 class body extends Component{
     state = {
         load:false
@@ -13,8 +14,8 @@ class body extends Component{
             <div>
             <Header />
                 <div className="Background__image-SignIn">
-                    <Bodyright />
                     <Bodyleft />
+                    <Bodyright />
                 </div>
             <Footer />
             </div>

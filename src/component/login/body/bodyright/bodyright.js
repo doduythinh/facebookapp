@@ -1,13 +1,13 @@
+import body from '../../../../sass/main.scss';
 import React,{ Component }  from 'react';
-import Bodyleft from '../../../../sass/login.scss';
 import  { connect } from 'react-redux';
 import * as actions from '../../../../store/action/index';
-import Input from '../../../UI/input/Input';
+import  Input from '../../../UI/input/Input';
 import Spinner from '../../../UI/Spinner/Spinner';
 import Button from '../../../UI/Button/Button';
 import Button_SignIn from '../../../UI/Button/Button.scss';
 import {updateoBject,checkValidity} from "../../../../shared/utility";
-import { RadioButton, RadioGroup } from 'react-radio-group-context';
+// import { RadioButton, RadioGroup } from 'react-radio-group-context';
 import Label from '../../../UI/label/label';
 
 class bodyright extends Component{
@@ -15,43 +15,44 @@ class bodyright extends Component{
         controls: {
             firt_name: {
                 className:'inputFirt_name',
-                elementType: 'input',
+                inputType: 'input',
                 elementConfig: {
                     type: 'text',
                     placeholder: ' Họ '
                 },
-                firt_nameError: "",
             },
             last_name: {
                 className:'inputLast_name',
-                elementType: 'input',
+                inputType: 'input',
                 elementConfig: {
                     type: 'text',
                     placeholder: ' Tên',
                 },
-                last_nameError: "",
             },
             phone: {
                 className:'inputPhone',
-                elementType: 'input',
+                inputType: 'input',
                 elementConfig: {
                     type:'text',
                     placeholder: ' Số điện thoại hoặc email'
                 },
-                phoneError: "",
+                phoneError: '',
+                touched: false
+
             },
             password: {
                 className:'inputPassword',
-                elementType: 'input',
+                inputType: 'input',
                 elementConfig: {
                     type: 'password',
                     placeholder: ' Mật khẩu'
                 },
-                passwordError: "",
+                error: "",
+                value: "",
             },
             birth_date: {
                 className:'inputDate',
-                elementType: 'input',
+                inputType: 'input',
                 elementConfig: {
                     type: 'date',
                     placeholder: 'date',
@@ -60,81 +61,94 @@ class bodyright extends Component{
             },
             sex_female: {
                 className:'inputFemale',
-                elementType: 'input',
+                inputType: 'input',
+                type:'radio',
                 elementConfig: {
-                    type: 'radio',
                     name: 'sex',
                 },
                 value: '0',
-                sex_femaleError: "",
             },
             sex_male: {
                 className:'inputMale',
-                elementType: 'input',
+                inputType: 'input',
+                type: 'radio',
                 elementConfig: {
-                    type: 'radio',
                     name: 'sex',
                 },
                 value: '1',
-                sex_maleError: "",
             },
             sex_option: {
                 className:'inputOption',
-                elementType: 'input',
+                inputType: 'input',
+                type: 'radio',
                 elementConfig: {
                     type: 'radio',
                     name: 'sex',
                 },
                 value: '2',
-                sex_optionError: "",
+            },
+        },
+        label: {
+            labelspeed:{
+                labelType:'label',
+                className:'speed',
+                labelConfig:{
+                    name:'Nhanh chóng và dễ dàng',
+                },
+            },
+            labelDate:{
+                labelType:'label',
+                className:'Date',
+                labelConfig: {
+                    name: 'Ngày Sinh',
+                }
+            },
+            labelMale:{
+                labelType:'label',
+                className:'Male',
+                labelConfig: {
+                    name: 'Nam',
+                }
+            },
+            labelFemale:{
+                labelType:'label',
+                className:'Female',
+                labelConfig: {
+                    name: 'Nữ',
+                }
+            },
+            labelOption:{
+                labelType:'label',
+                className:'Option',
+                labelConfig: {
+                    name: 'Tùy Chỉnh',
+                }
             },
         },
         sex_state: '',
-        name_Label: {
-            labelspeed:{
-                name: 'Nhanh chóng và dễ dàng',
-                className:'labelfirtName',
-                elementType: 'label',
-            },
-            labelLastName:{
-                name: 'Ngày Sinh',
-                className:'labelfirtName',
-                elementType: 'label',
-            },
-            labelDate:{
-                name: 'Giới Tính',
-                className:'labelfirtName',
-                elementType: 'label',
-            },
-            labelSexFemale:{
-                name: 'Nam',
-                className:'labelfirtName',
-                elementType: 'label',
-            },
-            labelSexMale:{
-                name: 'Nữ',
-                className:'labelfirtName',
-                elementType: 'label',
-            },
-            labelOption:{
-                name: 'Tùy Chỉnh',
-                className:'labelfirtName',
-                elementType: 'label',
-            }
-
-        }
     }
     inputchangerHandler = (event, controlName) => {
         let updatedControls = updateoBject( this.state.controls, {
             [controlName]: updateoBject(this.state.controls[controlName],{
-                value:event.target.value
+             value: event.target.value,
             })
         })
+        console.log(event.target.value);
+        // console.log(event.target.value)
+        // console.log(this.state.controls[controlName])
+        // if(this.state.controls.phone.value < 6)
+        // {
+        //     this.state.controls.phoneError = 'username needs to be atleast 5 characters long'
+        // }
+        // if(this.state.controls.password.value < 6)
+        // {
+        //     this.state.controls.phoneError = 'password needs to be atleast 5 characters long'
+        // }
+        console.log('123123123123123123',this.state.controls[controlName].value);
         let sexSelected = 0;
         if (event.target.name == 'sex') {
             sexSelected = event.target.value;
         }
-        console.log(event.target.value);
         this.setState({controls: updatedControls, sex_state: sexSelected})
     }
     submitSignIn = (event) => {
@@ -151,59 +165,60 @@ class bodyright extends Component{
     //         passwordError: "",
     //         first_nameError: "",
     //         last_nameError: "",
+    //         birth_dateError:""
     //     };
     //     console.log(errors)
     //
-    //     if(this.state.controls.phone.length < 6)
+    //     if(this.state.controls.phone.value.length < 6)
     //     {
     //         isError = true;
     //         errors.phoneError = ' usernam needs to be atleast 5 characters long'
+    //         console.log(errors.phoneError)
     //     }
-    //     if(this.state.controls.password.length < 6)
+    //     if(this.state.controls.password.value.length < 6)
     //     {
     //         isError = true;
-    //         errors.passwordError = ' password needs to be atleast 5 characters long'
+    //         errors.passwordError = ' password needs to be atleast 5 characters long';
     //     }
-    //     if(this.state.controls.firt_name.length < 3)
+    //     if(this.state.controls.firt_name.value.length < 3)
     //     {
     //         isError = true;
-    //         errors.passwordError = ' firt_name needs to be atleast 5 characters long'
+    //         errors.first_nameError = ' firt_name needs to be atleast 5 characters long'
     //     }
-    //     if(this.state.controls.last_name.length < 3)
+    //     if(this.state.controls.last_name.value.length < 3)
     //     {
     //         isError = true;
-    //         errors.passwordError = ' last_name needs to be atleast 5 characters long'
+    //         errors.last_nameError = ' last_name needs to be atleast 5 characters long'
+    //     }
+    //     if(this.state.controls.birth_date.value.length < 3)
+    //     {
+    //         isError = true;
+    //         errors.birth_dateError = ' last_name needs to be atleast 5 characters long'
     //     }
     //         this.setState({
     //             ...this.state,
     //             ...errors
     //         })
-    //     return isError;
     //     console.log(isError);
+    //     return isError;
     // }
-    // handlerValidation =  (e) => {
-    //     e.preventDefault();
-    //     const err = this.validation();
-    //     if(!err)
-    //     {
-    //         this.setState({
-    //             phone: "",
-    //             phoneError: "",
-    //             password: "",
-    //             passwordError: "",
-    //             first_name:"",
-    //             first_nameError: "",
-    //             last_name:"",
-    //             last_nameError: "",
-    //         })
-    //         this.props.onChange({
-    //             phone: "",
-    //             password: "",
-    //             first_name:"",
-    //             last_name:"",
-    //         })
-    //     }
-    // }
+    handlerValidation =  (e) => {
+        const err = this.validation();
+        if(!err)
+        {
+            this.setState({
+                // phone: "",
+                phoneError: "",
+                // password: "",
+                passwordError: "",
+                // first_name:"",
+                first_nameError: "",
+                // last_name:"",
+                last_nameError: "",
+            })
+        }
+        console.log(err)
+    }
     render() {
         const formElementArray = [];
         const labelElementArray = [];
@@ -217,52 +232,59 @@ class bodyright extends Component{
         let form = formElementArray.map(formElement =>(
             <Input
                 key={formElement.id}
-                elementType={formElement.config.elementType}
+                inputType={formElement.config.inputType}
                 elementConfig={formElement.config.elementConfig}
                 value={formElement.config.value}
                 name={formElement.config.name}
+                type={formElement.config.type}
                 className={formElement.config.className}
-                // changed={event => this.validation(event)}
-                changed={(event) => this.inputchangerHandler(event,formElement.id)}
+                 changed={(event) => this.inputchangerHandler(event,formElement.id)}
+                // changed = {(event) =>this.validation(event,formElement.id)}
             />
             )
         )
-        for(let label in this.state.name_Label)
+        for(let key in this.state.label)
         {
             labelElementArray.push({
-                id:label,
-                config: this.state.name_Label[label]
+                id: key,
+                config: this.state.label[key]
             })
         }
-        let label = labelElementArray.map(labelElement => (
-            <Label   key={labelElement.id}
-                     elementType={labelElement.config.elementType}
-                     className={labelElement.config.className}
-                     name={labelElement.config.name}
-            />
-        ))
+        let label = labelElementArray.map(formElement =>(
+                <Label
+                    key={formElement.id}
+                    name={formElement.config.name}
+                    className={formElement.config.className}
+                    labelType={formElement.config.labelType}
+                    labelConfig={formElement.config.labelConfig}
+                />
+            )
+        )
         // console.log(label);
-        // if(this.props.loading)
-        // {
-        //     form = <Spinner />
+        // else if(this.props.error){
+        //     errorMessenge = (
+        //             <p>{this.props.error.Messenger}</p>
+        //         )
         // }
         // let errorMessenge = null;
-        //
-        // if(this.props.error)
-        // {
-        //     errorMessenge = (
-        //         <p>{this.props.error.Messenger}</p>
-        //     )
-        // }
+        if(this.props.loading)
+        {
+            form = <Spinner className="center" />
+        }
         return(
-            <div className="bodyleft">
-                {/*{errorMessenge}*/}
+            <div className="">
                 <p className="bodyleft_Signup">Đăng Ký</p>
-                {label}
-                <form>
+                {/*<p className="bodyleft_speed">Nhanh chóng và dễ dàng</p>*/}
+                <form onSubmit={e =>this.handlerValidation(e)}>
                     {form}
+                    {label}
+                    {console.log(label)}
                     <Button clicked={this.submitSignIn}>Đăng Ký</Button>
                 </form>
+                {/*<p className="bodyleft_Date">Ngày Sinh</p>*/}
+                {/*<p className="bodyleft_male">Nam </p>*/}
+                {/*<p className="bodyleft_female">Nữ</p>*/}
+                {/*<p className="bodyleft_Option">Tùy Chỉnh</p>*/}
             </div>
         )
     }
@@ -272,7 +294,6 @@ const mapStateToProps = state => {
        loading:state.auth.loading,
        error:state.auth.error,
        isAuthenticated: state.auth.token !==null,
-
    }
 }
 const mapDispatchToProps = dispatch =>{

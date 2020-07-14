@@ -26,83 +26,86 @@
   border: 1px solid red;
   background-color: #FDA49A;
 }
-.inputPassword{
-  outline: none;
-  border: 1px solid #ccc;
-  background-color: white;
-  font: inherit;
-  height: 3rem;
-  display: block;
-  width: 35rem;
-  border-radius: 0.3rem;
-  margin-left: 5rem;
-  margin-top: -1rem;
-}
-.inputPhone{
-  outline: none;
-  border: 1px solid #ccc;
-  background-color: white;
-  font: inherit;
-  margin-top: 4rem;
-  height: 3rem;
-  display: block;
-  width: 35rem;
-  border-radius: 0.3rem;
-  margin-left: 5rem;
-}
-.inputFirt_name{
-  outline: none;
-  border: 1px solid #ccc;
-  background-color: white;
-  font: inherit;
-  height: 3rem;
-  display: inline-block;
-  width: 17rem;
-  border-radius: 0.3rem;
-  float: left;
-  margin-left: -10.7rem;
-  margin-top: 3.5rem;
-}
-.inputLast_name{
-  outline: none;
-  border: 1px solid #ccc;
-  background-color: white;
-  font: inherit;
-  display: inline-block;
-  width: 17rem;
-  height: 3rem;
-  border-radius: 0.3rem;
-  float: left;
-  margin-left: 1rem;
-  margin-top: 1.8rem;
-}
-.inputDate{
-  outline: none;
-  border: 1px solid #ccc;
-  background-color: white;
-  font: inherit;
-  height: 3rem;
-  display: block;
-  width: 35rem;
-  border-radius: 0.3rem;
-  margin-left: 5rem;
-}
-.inputFemale{
-float: left;
-
-  display: inline-block;
-  margin-left: 5rem;
-}
-.inputMale{
-  float: left;
-  margin-left: 12rem;
-  display: inline-block;
-  margin-top: -1.5rem;
-
-}
-.inputOption{
-  float: left;
-  margin-top: -3rem;
-  margin-left: 20rem;
-  display: inline-block;
-}
+.inputPassword {
+    outline: none;
+    border: 2px solid #808080;
+    background-color: white;
+    font: inherit;
+    height: 3rem;
+    display: block;
+    width: 35rem;
+    float: right;
+    border-radius: 0.3rem;
+    margin-right: -35.5rem;
+    margin-top: 5.5rem;
+  }
+  .inputPhone{
+    outline: none;
+    border: 2px solid #808080;
+    background-color: white;
+    font: inherit;
+    margin-top: 1rem;
+    height: 3rem;
+    display: block;
+    width: 35rem;
+    float: right;
+    border-radius: 0.3rem;
+    margin-right: 7.5rem;
+  }
+  .inputFirt_name{
+    outline: none;
+    border: 2px solid #808080;
+    background-color: white;
+    font: inherit;
+    height: 3rem;
+    display: inline-block;
+    width: 17rem;
+    border-radius: 0.3rem;
+    float: right;
+    margin-right: -17.2rem;
+    margin-top: 9rem;
+  }
+  .inputLast_name{
+    outline: none;
+    border: 2px solid #808080;
+    background-color: white;
+    font: inherit;
+    display: inline-block;
+    width: 17rem;
+    height: 3rem;
+    border-radius: 0.3rem;
+    float: right;
+    margin-right: 7rem;
+    margin-top: -3.4rem;
+  }
+  .inputDate{
+    outline: none;
+    border: 2px solid #808080;
+    background-color: white;
+    font: inherit;
+    height: 3rem;
+    display: block;
+    width: 35rem;
+    float: right;
+    border-radius: 0.3rem;
+    margin-right: -35.5rem;
+    margin-top: 11.5rem;
+  }
+  .inputFemale{
+    float: right;
+    display: inline-block;
+    margin-top: 17rem;
+    margin-right: -2rem;
+  }
+  .inputMale{
+    float: right;
+    margin-right: -10rem;
+    display: inline-block;
+    margin-top: 17rem;
+  }
+  .inputOption{
+    float: right;
+    margin-top: 17rem;
+    margin-right: -20rem;
+    display: inline-block;
+  }

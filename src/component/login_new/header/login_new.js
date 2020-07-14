@@ -1,5 +1,5 @@
 import React,{Component} from "react";
-import login from '../../../sass/login.scss';
+import login from '../../../sass/main.scss';
 import body from '../body/body';
 class login_new extends Component{
 

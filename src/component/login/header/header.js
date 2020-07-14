@@ -1,9 +1,10 @@
 import React,{ Component }  from 'react';
-import login from '../../../sass/login.scss';
+import login from '../../../sass/main.scss';
 import { connect } from 'react-redux';
 import axios from '../../../axios-facebook';
 import * as actions from '../../../store/action/index';
 import spinner from "../../UI/Spinner/Spinner";
+import Spinner from "react-bootstrap/cjs/Spinner";
 
 class Header extends Component{
     state= {
@@ -32,6 +33,10 @@ class Header extends Component{
          this.props.onAuth(this.state.phone,this.state.password,this.state.isSignup)
     }
     render() {
+        if(this.props.loading)
+        {
+            // <Spinner />
+        }
         return (
             <div className="header">
                 <div className="header__facebook">

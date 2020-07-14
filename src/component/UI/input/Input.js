@@ -1,9 +1,13 @@
 import React from "react";
-import Input from './Input.scss';
+import Input from '../../../sass/main.scss';
 
 const input = (props) => {
     let inputElement = null;
-    const inputClasses = [Input.InputElement]
+    // const inputClasses = ""
+    // if(props.invalid && props.shouldValidate && props.touched)
+    // {
+    //     inputClasses.push(inputClasses.Invalid)
+    // }
     switch (props.inputType) {
         case('input'):
             inputElement = <input className={props.className}
@@ -32,6 +36,7 @@ const input = (props) => {
                     ))}
             </select>
             break;
+
         default:
             inputElement = <input
                 className={props.className}
@@ -39,11 +44,12 @@ const input = (props) => {
                 value={props.value}
                 onChange={props.changed}
             />
+            break;
 
     }
     return (
         <div className="Input">
-            {/*<label>{props.label}</label>*/}
+            <label>{props.label}</label>
             {inputElement}
         </div>
     )

@@ -1,9 +1,13 @@
-@media (min-width: 1280px) {
-    .Background__image-SignIn{
+@include respond(tab-land)
+{
+.Background__image-SignIn
+{
         float: left;
         background: linear-gradient(#fff, #d9ddeb);
-        position: absolute;
+        position: relative;
         width: 100%;
-        height: 70%;
-    }
+        height: 55rem;
 }
+}
+
+
