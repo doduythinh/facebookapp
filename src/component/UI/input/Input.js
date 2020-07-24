@@ -15,7 +15,6 @@ const input = (props) => {
                                   value={props.value}
                                      onChange={props.changed}
                                   name={props.elementConfig.name}
-                                  type={props.type}
             />
             break;
         case('textarea'):

@@ -3,24 +3,25 @@ import login from '../../../sass/main.scss';
 import { connect } from 'react-redux';
 import axios from '../../../axios-facebook';
 import * as actions from '../../../store/action/index';
-import spinner from "../../UI/Spinner/Spinner";
-import Spinner from "react-bootstrap/cjs/Spinner";
+import Spinner from "../../UI/Spinner/Spinner";
+import { Redirect } from 'react-router-dom';
+import Body from '../../../containers/NewsSites/body/body';
+import {Route, Switch ,BrowserRouter,NavLink,Link } from 'react-router-dom';
+import NavigationItem from '../../UI/NavigationItem/NavigationItem';
 
 class Header extends Component{
     state= {
             phone: "",
             password:"",
             isSignup:true,
-            valid: false,
-            touched: false
+            touched: false,
     }
     componentDidMount() {
-        if(this.props.authRedirectPath !== '/')
+        if(this.props.authRedirectPath !== '/bangtin')
         {
             this.props.onAuthRedirectPath();
         }
     }
-
     inputchangedHandler = (event) => {
         event.preventDefault();
         let value_phone= this.textInputone.value;
@@ -30,15 +31,24 @@ class Header extends Component{
     }
     submitHandler = (event) => {
         event.preventDefault();
-         this.props.onAuth(this.state.phone,this.state.password,this.state.isSignup)
+        this.props.onAuth(this.state.phone,this.state.password,this.state.isSignup)
     }
     render() {
-        if(this.props.loading)
+        let Authredirect = null;
+        if(this.props.isAuthenticated)
         {
-            // <Spinner />
+            Authredirect =  <Redirect  to={this.props.auRedirect} />
         }
+        // else {
+        // Authredirect = <Redirect  to={{pathname: '/bangtin'}} />
+        // }
+        // if(this.state.loggedIn)
+        // {
+        //     return <Redirect to="/bangtin " />
+        // }
         return (
             <div className="header">
+                <div>{Authredirect}</div>
                 <div className="header__facebook">
                    <a href="#" className="header__facebook_name">facebook</a>
                 </div>
@@ -66,8 +76,9 @@ class Header extends Component{
                     </div>
                 </div>
                     <div className="header__login-button">
-                        <button onClick={this.submitHandler} href="#" className="header__login-button-lg">Đăng nhập
-                        </button>
+                       <button onClick={this.submitHandler} href="#" className="header__login-button-lg">
+                          Đăng nhập
+                       </button>
                     </div>
             </div>
         );
@@ -77,12 +88,15 @@ const mapStateProps = state => {
     return{
         loading:state.auth.loading,
         error: state.auth.error,
+        isAuthenticated: state.auth.token !== null,
+        auRedirect:state.auth.authRedirectPath
     }
 }
 const mapDispatchToProps = dispatch => {
     return {
-        onAuth:(phone,password, isSignup) => dispatch(actions.AuthUserSignIn(phone,password,isSignup)),
-        onAuthRedirectPath: () => dispatch(actions.setAuthRedirectPath('/'))
+        onAuth:(phone,password,isSignup) => dispatch(actions.AuthUserSignIn(phone,password,isSignup)),
+        onAuthRedirectPath: () => dispatch(actions.setAuthRedirectPath('/bangtin'))
     }
 }
 export default connect(mapStateProps,mapDispatchToProps)(Header);
+    // <NavigationItem link="/bangtin" >

@@ -50,3 +50,19 @@ export const setAuthRedirectPath = (path) => {
         path:path
     }
 }
+export  const logoutSuccess = () => {
+    return {
+        type: actionsTypes.AUTH_LOGOUT,
+    }
+}
+
+export  const checkState = () => {
+    return {
+        type: actionsTypes.AUTH_CHECK_STATE,
+    }
+}
+export  const logout = () => {
+    return {
+        type: actionsTypes.AUTH_INITIATE_LOGOUT,
+    }
+}

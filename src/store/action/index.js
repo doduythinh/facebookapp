@@ -6,4 +6,7 @@ export {
     AuthUserSignIn,
     AuthUserSignnUp,
     setAuthRedirectPath,
+    logoutSuccess,
+    checkState,
+    logout
 } from './AuthLogin';
