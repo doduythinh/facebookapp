@@ -57,3 +57,11 @@ html{
 .center{
     float: left;
 }
+.errorMessagesurname{
+    color: red;
+    font-size: 1.1em;
+    position: absolute;
+    margin-right: -2rem;
+    float: $float-right;
+    margin-top: 0.5rem;
+}

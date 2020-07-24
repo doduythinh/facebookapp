@@ -2,39 +2,47 @@ import { updateoBject } from "../../shared/utility";
 import * as actionsTypes from "../../store/action/actionsTypes";
 
 const initialState = {
-    token:null,
-    userId:null,
     error:null,
+    userId:null,
+    token:null,
     loading:false,
-    authRedirectPath: '/'
+    authRedirectPath: '/bangtin'
 }
 
-const Authlogintrue = (state,action)=> {
-    return updateoBject( state, {token:action.idToken,userId:action.userId,error:null,loading:false})
+const authLogintrue = (state,action)=> {
+    return updateoBject( state, {token:action.token,error: null,loading:true,authRedirectPath:'/bangtin'})
 }
-const Authloginfalse = (state,action)=> {
-    return updateoBject( state, {error: action.error,loading:true})
+const authLoginfalse = (state,action)=> {
+    return updateoBject( state, {error: action.error,loading:false})
 }
-const AuthuserStart  = (state,action) => {
+const authUserStart  = (state,action) => {
     return updateoBject(state , {error:null,loading:true})
 }
 const checkAuTimeOut  = (state,action) => {
     return updateoBject(state , {error:null,loading:true})
 }
-const AuthUser  = (state,action) => {
+const authUser  = (state,action) => {
     return updateoBject(state , {error:false,loading:true})
 }
-const AuthUserSignnup  = (state,action) => {
+const authUserSignnup  = (state,action) => {
     return updateoBject(state , {error:false,loading:true})
+}
+const authLogout = (state,action) => {
+    return updateoBject(state,{userId:null,token:null})
+}
+const setAuthRedirectPath = (state, action) => {
+    return updateoBject(state, {authRedirectPath: action.path})
 }
 const reducer = (state = initialState,action) => {
     switch (action.type) {
-        case actionsTypes.USER_LOGIN_TRUE: return Authlogintrue(state,action);
-        case actionsTypes.USER_LOGIN_FAIL: return Authloginfalse(state,action);
-        case actionsTypes.USER_AUTH_START: return AuthuserStart(state,action);
+        case actionsTypes.USER_LOGIN_TRUE: return authLogintrue(state,action);
+        case actionsTypes.USER_LOGIN_FAIL: return authLoginfalse(state,action);
+        case actionsTypes.USER_AUTH_START: return authUserStart(state,action);
         case actionsTypes.USER_CHECKTIMEOUT: return checkAuTimeOut(state,action);
-        case actionsTypes.AUTH_USER: return AuthUser(state,action);
-        case actionsTypes.AUTH_USERSIGNUP: return AuthUserSignnup(state,action);
+        case actionsTypes.AUTH_USER: return authUser(state,action);
+        case actionsTypes.AUTH_USERSIGNUP: return authUserSignnup(state,action);
+        case actionsTypes.SET_AUTH_REDIRECT_PATH: return setAuthRedirectPath(state,action);
+        case actionsTypes.AUTH_INITIATE_LOGOUT: return authLogout(state,action);
         default:
             return state;
     }

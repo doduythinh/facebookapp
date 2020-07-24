@@ -13,13 +13,15 @@ import Label from '../../../UI/label/label';
 class bodyright extends Component{
     state = {
         controls: {
-            firt_name: {
+            first_name: {
                 className:'inputFirt_name',
                 inputType: 'input',
                 elementConfig: {
                     type: 'text',
                     placeholder: ' Họ '
                 },
+                value:'',
+                // name:'first_name'
             },
             last_name: {
                 className:'inputLast_name',
@@ -28,6 +30,8 @@ class bodyright extends Component{
                     type: 'text',
                     placeholder: ' Tên',
                 },
+                value:'',
+                // name:'last_name'
             },
             phone: {
                 className:'inputPhone',
@@ -37,8 +41,9 @@ class bodyright extends Component{
                     placeholder: ' Số điện thoại hoặc email'
                 },
                 phoneError: '',
-                touched: false
-
+                touched: false,
+                value:'',
+                // name:'phone'
             },
             password: {
                 className:'inputPassword',
@@ -48,32 +53,35 @@ class bodyright extends Component{
                     placeholder: ' Mật khẩu'
                 },
                 error: "",
-                value: "",
+                value:'',
+                // name: 'password'
             },
             birth_date: {
                 className:'inputDate',
                 inputType: 'input',
                 elementConfig: {
-                    type: 'date',
+                    type:'date',
                     placeholder: 'date',
                 },
                 birth_dateError: "",
+                value:'',
+                // name: 'birth_date'
             },
             sex_female: {
                 className:'inputFemale',
                 inputType: 'input',
-                type:'radio',
                 elementConfig: {
                     name: 'sex',
+                    type:'radio',
                 },
                 value: '0',
             },
             sex_male: {
                 className:'inputMale',
                 inputType: 'input',
-                type: 'radio',
                 elementConfig: {
                     name: 'sex',
+                    type: 'radio',
                 },
                 value: '1',
             },
@@ -127,97 +135,66 @@ class bodyright extends Component{
         },
         sex_state: '',
     }
-    inputchangerHandler = (event, controlName) => {
+    inputchangerHandler = async (val, controlName) => {
+        // val.preventDefault();
         let updatedControls = updateoBject( this.state.controls, {
             [controlName]: updateoBject(this.state.controls[controlName],{
-             value: event.target.value,
+                value: val.target.value,
             })
         })
-        console.log(event.target.value);
-        // console.log(event.target.value)
-        // console.log(this.state.controls[controlName])
-        // if(this.state.controls.phone.value < 6)
-        // {
-        //     this.state.controls.phoneError = 'username needs to be atleast 5 characters long'
-        // }
-        // if(this.state.controls.password.value < 6)
-        // {
-        //     this.state.controls.phoneError = 'password needs to be atleast 5 characters long'
-        // }
-        console.log('123123123123123123',this.state.controls[controlName].value);
-        let sexSelected = 0;
-        if (event.target.name == 'sex') {
-            sexSelected = event.target.value;
+        let isError = false;
+            let errors = {
+                phoneError: "",
+                passwordError: "",
+                first_nameError: "",
+                last_nameError: "",
+                birth_dateError:""
+            };
+        // let { formcontrols1 } = this.state.controls
+        if(this.state.controls.phone.value.length < 10 && this.state.controls.phone.value.length > 0)
+        {
+            isError = true;
+            errors.phoneError = 'phone needs to be atleast 10 characters long';
+            console.log(errors.phoneError)
         }
-        this.setState({controls: updatedControls, sex_state: sexSelected})
+        if(this.state.controls.password.value.length < 10 && this.state.controls.password.value.length > 0)
+        {
+            isError = true;
+            errors.passwordError = 'number needs to be atleast 10 characters long';
+            console.log(errors.passwordError)
+        }
+        if(this.state.controls.first_name.value.length < 6 && this.state.controls.first_name.value.length > 0)
+        {
+            isError = true;
+            errors.first_nameError = 'firt_name needs to be atleast 6 characters long';
+            console.log(errors.first_nameError)
+        }
+        if(this.state.controls.last_name.value.length < 6 && this.state.controls.last_name.value.length > 0)
+        {
+            isError = true;
+            errors.last_nameError = 'lastname needs to be atleast 6 characters long';
+            console.log(errors.last_nameError)
+        }
+        if(this.state.controls.birth_date.value.length < 1 && this.state.controls.birth_date.value.length > 0)
+        {
+            isError = true;
+            errors.birth_dateError = 'lastname needs to be atleast 1 characters long';
+            console.log(errors.birth_dateError)
+        }
+        let sexSelected = 0;
+        if (val.target.name == 'sex') {
+            sexSelected = val.target.value;
+        }
+        await this.setState({controls: updatedControls, sex_state: sexSelected})
+        console.log('123123123123123123', this.state.controls[controlName].value)
+        return isError;
     }
     submitSignIn = (event) => {
         event.preventDefault()
         // let vali = this.handlerValidation();
-        this.props.onAuthSinup(this.state.controls.firt_name.value,this.state.controls.last_name.value,
+        this.props.onAuthSinup(this.state.controls.first_name.value,this.state.controls.last_name.value,
             this.state.controls.phone.value,this.state.controls.password.value,
             this.state.controls.birth_date.value,this.state.sex_state)
-    }
-    // validation  = () => {
-    //     let isError = false;
-    //     const errors = {
-    //         phoneError: "",
-    //         passwordError: "",
-    //         first_nameError: "",
-    //         last_nameError: "",
-    //         birth_dateError:""
-    //     };
-    //     console.log(errors)
-    //
-    //     if(this.state.controls.phone.value.length < 6)
-    //     {
-    //         isError = true;
-    //         errors.phoneError = ' usernam needs to be atleast 5 characters long'
-    //         console.log(errors.phoneError)
-    //     }
-    //     if(this.state.controls.password.value.length < 6)
-    //     {
-    //         isError = true;
-    //         errors.passwordError = ' password needs to be atleast 5 characters long';
-    //     }
-    //     if(this.state.controls.firt_name.value.length < 3)
-    //     {
-    //         isError = true;
-    //         errors.first_nameError = ' firt_name needs to be atleast 5 characters long'
-    //     }
-    //     if(this.state.controls.last_name.value.length < 3)
-    //     {
-    //         isError = true;
-    //         errors.last_nameError = ' last_name needs to be atleast 5 characters long'
-    //     }
-    //     if(this.state.controls.birth_date.value.length < 3)
-    //     {
-    //         isError = true;
-    //         errors.birth_dateError = ' last_name needs to be atleast 5 characters long'
-    //     }
-    //         this.setState({
-    //             ...this.state,
-    //             ...errors
-    //         })
-    //     console.log(isError);
-    //     return isError;
-    // }
-    handlerValidation =  (e) => {
-        const err = this.validation();
-        if(!err)
-        {
-            this.setState({
-                // phone: "",
-                phoneError: "",
-                // password: "",
-                passwordError: "",
-                // first_name:"",
-                first_nameError: "",
-                // last_name:"",
-                last_nameError: "",
-            })
-        }
-        console.log(err)
     }
     render() {
         const formElementArray = [];
@@ -236,10 +213,8 @@ class bodyright extends Component{
                 elementConfig={formElement.config.elementConfig}
                 value={formElement.config.value}
                 name={formElement.config.name}
-                type={formElement.config.type}
                 className={formElement.config.className}
                  changed={(event) => this.inputchangerHandler(event,formElement.id)}
-                // changed = {(event) =>this.validation(event,formElement.id)}
             />
             )
         )
@@ -260,13 +235,6 @@ class bodyright extends Component{
                 />
             )
         )
-        // console.log(label);
-        // else if(this.props.error){
-        //     errorMessenge = (
-        //             <p>{this.props.error.Messenger}</p>
-        //         )
-        // }
-        // let errorMessenge = null;
         if(this.props.loading)
         {
             form = <Spinner className="center" />
@@ -274,17 +242,18 @@ class bodyright extends Component{
         return(
             <div className="">
                 <p className="bodyleft_Signup">Đăng Ký</p>
-                {/*<p className="bodyleft_speed">Nhanh chóng và dễ dàng</p>*/}
-                <form onSubmit={e =>this.handlerValidation(e)}>
+                <p className="bodyleft_speed">Nhanh chóng và dễ dàng</p>
+                <form>
+                    {/*{formErrors.first_name.length > 0 && (<span className="errorMessagesurname">{formErrors.first_name}</span>)}*/}
                     {form}
                     {label}
-                    {console.log(label)}
+                    {/*{console.log(label)}*/}
                     <Button clicked={this.submitSignIn}>Đăng Ký</Button>
                 </form>
-                {/*<p className="bodyleft_Date">Ngày Sinh</p>*/}
-                {/*<p className="bodyleft_male">Nam </p>*/}
-                {/*<p className="bodyleft_female">Nữ</p>*/}
-                {/*<p className="bodyleft_Option">Tùy Chỉnh</p>*/}
+                <p className="bodyleft_Date">Ngày Sinh</p>
+                <p className="bodyleft_male">Nam </p>
+                <p className="bodyleft_female">Nữ</p>
+                <p className="bodyleft_Option">Tùy Chỉnh</p>
             </div>
         )
     }
