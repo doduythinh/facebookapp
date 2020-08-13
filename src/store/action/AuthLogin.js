@@ -4,7 +4,6 @@ export const logintrue  = (token,userId) => {
     return {
         type:actionsTypes.USER_LOGIN_TRUE,
         idToken:token,
-        userId:userId
     }
 }
 export const loginfalse  = (error) => {

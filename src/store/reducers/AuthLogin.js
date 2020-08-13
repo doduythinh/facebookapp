@@ -10,7 +10,7 @@ const initialState = {
 }
 
 const authLogintrue = (state,action)=> {
-    return updateoBject( state, {token:action.token,error: null,loading:true,authRedirectPath:'/bangtin'})
+    return updateoBject( state, {token:action.token,error: null,loading:true})
 }
 const authLoginfalse = (state,action)=> {
     return updateoBject( state, {error: action.error,loading:false})
