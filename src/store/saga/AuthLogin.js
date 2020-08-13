@@ -7,7 +7,6 @@ import axios from '../../axios-facebook';
 
 export function* logoutSaga(action) {
     yield call([localStorage,'removeItem'], 'token');
-    yield call([localStorage,'removeItem'], 'expirationTime');
     yield put(actions.logoutSuccess());
 }
 export function* checkloginSaga(action) {
@@ -26,10 +25,10 @@ export function* userSignin(action) {
         let response = yield axios.post(url,authData);
         console.log(response);
         yield localStorage.setItem("tonken", response.data.data.token);
-        yield put(actions.logintrue(response.data.data.token,alert("login success")));
-        // { headers: { Authorization:localStorage.getItem('token') } }
+        yield put(actions.logintrue(response.data.data.token));
     } catch (error) {
-        yield put(actions.loginfalse(error.response.data.errors,alert("login fails")));
+        console.log(error.data.errors)
+        yield put(actions.loginfalse(error.data.errors,alert(error.data.errors)));
     }
 
 }
@@ -53,22 +52,23 @@ export  function* userSignup(action) {
     }
 
 }
-export function* authcheckstateSaga(action) {
+export function* authcheckstateSaga(action,next) {
     const token = yield localStorage.getItem('token');
-    console.log(token);
     if(!token)
     {
-        yield  put(actions.loginfalse());
+        yield  put(actions.logout());
     }
-    else {
-        const expirationDate = yield new Date(localStorage.getItem('expirationDate'));
-        if(expirationDate <= new Date())
-        {
-            yield put(actions.loginfalse())
-        }
+    // else {
+    //     const expirationDate = yield new Date(localStorage.getItem('expirationDate'));
+    //     if(expirationDate <= new Date())
+    //     {
+    //         yield put(actions.logout())
+    //     }
         else {
+            const token = yield localStorage.getItem('token');
             yield put(actions.logintrue(token));
-            yield put(actions.checkAuTimeOut(expirationDate.getSeconds() - new Date().getSeconds() / 1000))
+            // yield put(actions.checkAuTimeOut(expirationDate.getSeconds() - new Date().getSeconds() / 1000))
         }
-    }
+    // }
+
 }

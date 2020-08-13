@@ -34,10 +34,10 @@ class body_right_two extends Component{
                     <p className="bodyright_two_contact_name">CUỘC TRÒ CHUYỆN NHÓM </p>
                 </div>
                 <div>
-                    <AiTwotoneSetting className="AiTwotoneSetting" />
-                    <BsPencilSquare />
-                    <MdGroup />
-                    <RiLiveLine />
+                    {/*<AiTwotoneSetting className="AiTwotoneSetting" />*/}
+                    {/*<BsPencilSquare />*/}
+                    {/*<MdGroup />*/}
+                    {/*<RiLiveLine />*/}
                     <input className="bodyright_two-input" placeholder={emailIcon} type="text" placeholder="Tìm kiếm" />
                 </div>
             </div>

@@ -5,9 +5,7 @@ import axios from '../../../axios-facebook';
 import * as actions from '../../../store/action/index';
 import Spinner from "../../UI/Spinner/Spinner";
 import { Redirect } from 'react-router-dom';
-import Body from '../../../containers/NewsSites/body/body';
-import {Route, Switch ,BrowserRouter,NavLink,Link } from 'react-router-dom';
-import NavigationItem from '../../UI/NavigationItem/NavigationItem';
+import Button from '../../UI/Button/Button';
 
 class Header extends Component{
     state= {
@@ -31,7 +29,7 @@ class Header extends Component{
     }
     submitHandler = (event) => {
         event.preventDefault();
-        this.props.onAuth(this.state.phone,this.state.password,this.state.isSignup)
+            this.props.onAuth(this.state.phone,this.state.password,this.state.isSignup)
     }
     render() {
         let Authredirect = null;
@@ -39,13 +37,6 @@ class Header extends Component{
         {
             Authredirect =  <Redirect  to={this.props.auRedirect} />
         }
-        // else {
-        // Authredirect = <Redirect  to={{pathname: '/bangtin'}} />
-        // }
-        // if(this.state.loggedIn)
-        // {
-        //     return <Redirect to="/bangtin " />
-        // }
         return (
             <div className="header">
                 <div>{Authredirect}</div>
@@ -76,8 +67,8 @@ class Header extends Component{
                     </div>
                 </div>
                     <div className="header__login-button">
-                       <button onClick={this.submitHandler} href="#" className="header__login-button-lg">
-                          Đăng nhập
+                       <button onClick={this.submitHandler}  href="#" className="button_login">
+                           Đăng nhập
                        </button>
                     </div>
             </div>
@@ -99,4 +90,3 @@ const mapDispatchToProps = dispatch => {
     }
 }
 export default connect(mapStateProps,mapDispatchToProps)(Header);
-    // <NavigationItem link="/bangtin" >
