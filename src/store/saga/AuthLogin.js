@@ -2,9 +2,6 @@ import { put, call } from 'redux-saga/effects';
 import { delay } from "redux-saga/effects/";
 import * as actions from '../action';
 import axios from '../../axios-facebook';
-// import decode from 'jwt-decode';
-// import  axios from 'axios';
-
 export function* logoutSaga(action) {
     yield call([localStorage,'removeItem'], 'token');
     yield put(actions.logoutSuccess());
@@ -25,10 +22,11 @@ export function* userSignin(action) {
         let response = yield axios.post(url,authData);
         console.log(response);
         yield localStorage.setItem("tonken", response.data.data.token);
+        console.log("123456789", response.data.data.token)
         yield put(actions.logintrue(response.data.data.token));
     } catch (error) {
         console.log(error.data.errors)
-        yield put(actions.loginfalse(error.data.errors,alert(error.data.errors)));
+        yield put(actions.loginfalse(error.data.data.errors,alert(error.data.data.errors)));
     }
 
 }
@@ -58,17 +56,17 @@ export function* authcheckstateSaga(action,next) {
     {
         yield  put(actions.logout());
     }
-    // else {
-    //     const expirationDate = yield new Date(localStorage.getItem('expirationDate'));
-    //     if(expirationDate <= new Date())
-    //     {
-    //         yield put(actions.logout())
-    //     }
+    else {
+        const expirationDate = yield new Date(localStorage.getItem('expirationDate'));
+        if(expirationDate <= new Date())
+        {
+            yield put(actions.logout())
+        }
         else {
             const token = yield localStorage.getItem('token');
             yield put(actions.logintrue(token));
-            // yield put(actions.checkAuTimeOut(expirationDate.getSeconds() - new Date().getSeconds() / 1000))
+            yield put(actions.checkAuTimeOut(expirationDate.getSeconds() - new Date().getSeconds() / 1000))
         }
-    // }
+    }
 
 }

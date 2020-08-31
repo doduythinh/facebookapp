@@ -10,10 +10,15 @@ import {connect} from 'react-redux';
 import * as actions from './store/action/index';
 import asyncComponent from "./hoc/asyncComponent/asyncComponent";
 
-const asyncNewsite = asyncComponent(() => {
+const asyncNewTinTuc = asyncComponent(() => {
     return import('../src/containers/NewsSites/body/body')
 })
-console.log(asyncNewsite)
+const asyncloginsms = asyncComponent(() => {
+    return import('../src/component/sms/body/body')
+})
+// const asyncPerson = asyncComponent(() => {
+//     return import('../src/containers/PagePersonally/ToTalPersonally')
+// })
 class App extends Component
 {
     componentDidMount() {
@@ -23,9 +28,8 @@ class App extends Component
         let routes = (
             <Switch>
                 {/*<Route path="/login_new" component={Login_news}/>*/}
-                {/*<Route path="/sms" component={loginsms} />*/}
-                <Route path="/pagePersonally" component={PersonallyTotal} />
-                <Route path="/bangtin" component={asyncNewsite}/>
+                {/*<Route path="/bangtin" component={asyncNewsite}/>*/}
+                <Route path="/bangtin" component={NewTinTuc}/>
                 <Route path="/login" component={Body}/>
                 <Redirect  to="/login" />
             </Switch>
@@ -34,7 +38,10 @@ class App extends Component
         {
             routes = (
                 <Switch>
-                    <Route path="/bangtin" component={asyncNewsite}/>
+                    <Route path="/login_new" component={Login_news}/>
+                    <Route path="/pagePersonally" component={PersonallyTotal} />
+                    <Route path="/sms" component={asyncloginsms} />
+                    <Route path="/bangtin" component={NewTinTuc}/>
                     <Route exact path="/login" component={Body} />
                     <Redirect  to="/login" />
                 </Switch>

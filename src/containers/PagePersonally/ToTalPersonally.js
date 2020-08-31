@@ -11,7 +11,7 @@ class ToTalPersonally extends Component {
                 <HeaderPersonally />
                 <PersonallyLeft />
                 <PersonallyRight />
-                <BodyrightTwo  className="BodyrightTwo" />
+                {/*<BodyrightTwo  className="BodyrightTwo" />*/}
             </div>
         )
     }

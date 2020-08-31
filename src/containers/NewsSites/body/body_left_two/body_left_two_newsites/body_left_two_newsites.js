@@ -8,8 +8,21 @@ import {FaGlobeAmericas,
     RiMoreLine,
 } from "react-icons/all";
 import login from '../../../../../sass/main.scss';
+import { connect } from 'react-redux';
+import * as actions from '../../../../../store/action/index';
 class body_left_two_newsites extends Component{
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            startIndex: 0,
+            endIndex: 5
+        }
+    }
+
     render() {
+        const getSiteMap = null;
+
         return(
             <div className="body_left_two-newssites">
                 <img  src={thanos1}  className="body_left_two-newssites-img"/>
@@ -28,4 +41,14 @@ class body_left_two_newsites extends Component{
         )
     }
 }
-export default body_left_two_newsites;
+const getStatetoProp = state => {
+    return{
+        loading: state.NewSites.loading
+    }
+}
+const mapDispatchToProps = dispatch => {
+    return {
+        onGetSite:()=>dispatch(actions.getsites())
+    }
+}
+export default connect(getStatetoProp,mapDispatchToProps)(body_left_two_newsites);

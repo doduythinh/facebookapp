@@ -8,13 +8,15 @@ import { BrowserRouter } from "react-router-dom";
 import {Provider} from 'react-redux';
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-import  { watchAuthLogin } from './store/saga/index';
+import  { watchAuthLogin,watchNewsites } from './store/saga/index';
 import AuthLogin from './store/reducers/AuthLogin';
+import NewSites from './store/reducers/NewSites';
 
 const composeEnhancers = (process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null) || compose;
 
 const rootReducers = combineReducers({
     auth:AuthLogin,
+    NewSites: NewSites,
 })
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(rootReducers, composeEnhancers(
@@ -28,6 +30,7 @@ const app = (
     </Provider>
 );
 sagaMiddleware.run(watchAuthLogin);
+sagaMiddleware.run(watchNewsites);
 
 ReactDOM.render(app,
   document.getElementById('root')
