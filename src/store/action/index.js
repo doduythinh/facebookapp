@@ -10,3 +10,10 @@ export {
     checkState,
     logout
 } from './AuthLogin';
+
+export {
+    UpdatesNewsites,
+    UpdatesNewsitesTrue,
+    UpdatesNewsitesFail,
+    getsites
+} from './NewSites';
