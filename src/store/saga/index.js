@@ -2,7 +2,7 @@ import { takeEvery,all,takeLatest } from "redux-saga/effects";
 import * as actiontypes from '../action/actionsTypes';
 
 import  { logoutSaga,checkloginSaga,userSignin,userSignup,authcheckstateSaga } from './AuthLogin';
-import  { updateSite,getsite } from './NewSites';
+import  { updateSiteSaga,getSiteSaga } from './NewSites';
 export function* watchAuthLogin() {
  yield all([
      takeEvery(actiontypes.USER_CHECKTIMEOUT, checkloginSaga),
@@ -14,7 +14,7 @@ export function* watchAuthLogin() {
 }
 export function* watchNewsites() {
     yield  all([
-        takeEvery(actiontypes.UPDATETRUESITES,updateSite),
-        takeEvery(actiontypes.USER_GETSITES,getsite)
+        takeEvery(actiontypes.UPDATETRUESITES,updateSiteSaga),
+        takeEvery(actiontypes.STATE_CONTENT,getSiteSaga)
     ])
 }

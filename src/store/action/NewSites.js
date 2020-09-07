@@ -7,7 +7,6 @@ export const  UpdatesNewsites = (token) => {
     }
 }
 export const UpdatesNewsitesTrue = (content)=> {
-    console.log("12345667",content);
     return {
         type: actionTypes.UPDATETRUESITES,
         content: content
@@ -19,8 +18,20 @@ export const UpdatesNewsitesFail = (error) => {
         error: error
     }
 }
-export const getsites = () => {
+// export const getsites = () => {
+//     return{
+//         type: actionTypes.USER_GETSITES,
+//     }
+// }
+export const stateSite = () => {
     return{
-        type: actionTypes.USER_GETSITES
+        type: actionTypes.STATE_CONTENT,
+        // token:token
+    }
+}
+export const fetchSitesSuccess = (content) => {
+    return {
+        type: actionTypes.FETCH_SITES_SUCCESS,
+        content:content
     }
 }

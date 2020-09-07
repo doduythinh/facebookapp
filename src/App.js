@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import Body from '../src/component/login/body/body';
+import Body from './containers/Logins/body';
 import {Route, Switch ,BrowserRouter,withRouter,Redirect} from 'react-router-dom';
 import Login_news from "./component/login_new/login_news";
 import NewTinTuc from '../src/containers/NewsSites/body/body';

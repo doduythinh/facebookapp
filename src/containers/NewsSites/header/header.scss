@@ -9,7 +9,7 @@ html{
 @include respond(tab-land)
 {
   .header__bangtin{
-    width: 1280px;
+    width: 100%;
     background: $color-blue-mot;
     height: 50px;
   }
