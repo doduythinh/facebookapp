@@ -15,5 +15,7 @@ export {
     UpdatesNewsites,
     UpdatesNewsitesTrue,
     UpdatesNewsitesFail,
-    getsites
+    // getsites,
+    stateSite,
+    fetchSitesSuccess
 } from './NewSites';

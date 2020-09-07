@@ -52,7 +52,7 @@ class BodyLeftTwoStatus extends Component
 }
 const stateToProp = state =>{
     return {
-        token: state.NewSites.token
+        token: state.newSites.token
     }
 }
 const mapDispatchToProps = dispatch => {

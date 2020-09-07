@@ -14,9 +14,33 @@ import {FaGlobeAmericas,
     FcAddImage,
     FcPortraitMode
 } from "react-icons/all";
-import { connect } from 'react-redux';
+import  { connect } from 'react-redux';
+import * as actions from '../../../../store/action/index';
 class body_left_two extends Component{
+    componentDidMount()
+    {
+        // this.setState({content: this.props.content})
+        this.props.onGetSite(this.props.token)
+    }
     render() {
+        // console.log("10111213",this.props.content)
+        const getdataComponent = this.props.content && this.props.content.map(content => (
+            <Body_left_two_newsites
+             id={content.id}
+             content={content.content}
+            />
+        ))
+        const contentSide = [];
+        for(let contentStatus in this.props.content)
+        {
+            contentSide.push(
+                {
+                    id:contentStatus,
+                    content: this.props.content[contentStatus]
+                }
+            )
+        }
+
         return(
             <div className="body_left_two">
                 <Body_left_two_status />
@@ -33,10 +57,22 @@ class body_left_two extends Component{
                         <p className="body_left_two-story--name-def">Thêm vào tin</p>
                     </div>
                 </div>
-                <Body_left_two_newsites />
+                {getdataComponent}
             </div>
         )
     }
-
 }
-export default body_left_two;
+const mapStatetoProp = state => {
+    return{
+        loading: state.newSites.loading,
+        token: state.newSites.token,
+        content: state.newSites.content
+    }
+}
+const mapDispatchToProps = dispatch => {
+    // console.log("397929",dispatch(actions.stateSite()))
+    return {
+        onGetSite:()=>dispatch(actions.stateSite())
+    }
+}
+export default  connect(mapStatetoProp,mapDispatchToProps)(body_left_two);

@@ -6,7 +6,7 @@ import  Input from '../../../UI/input/Input';
 import Spinner from '../../../UI/Spinner/Spinner';
 import Button from '../../../UI/Button/Button';
 import Button_SignIn from '../../../UI/Button/Button.scss';
-import {updateoBject,checkValidity} from "../../../../shared/utility";
+import {updateObject,checkValidity} from "../../../../shared/utility";
 import Label from '../../../UI/label/label';
 
 class bodyright extends Component{
@@ -103,8 +103,8 @@ class bodyright extends Component{
     }
     inputchangerHandler = async (event, controlName) => {
         event.preventDefault();
-        let updatedControls = updateoBject(this.state.controls, {
-            [controlName]: updateoBject(this.state.controls[controlName], {
+        let updatedControls = updateObject(this.state.controls, {
+            [controlName]: updateObject(this.state.controls[controlName], {
                 value: event.target.value,
             })
         })

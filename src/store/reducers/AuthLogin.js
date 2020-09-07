@@ -1,4 +1,4 @@
-import { updateoBject } from "../../shared/utility";
+import { updateObject } from "../../shared/utility";
 import * as actionsTypes from "../../store/action/actionsTypes";
 
 const initialState = {
@@ -10,28 +10,28 @@ const initialState = {
 }
 
 const authLogintrue = (state,action)=> {
-    return updateoBject( state, {token:action.token,error: null,loading:true})
+    return updateObject( state, {token:action.token,error: null,loading:true})
 }
 const authLoginfalse = (state,action)=> {
-    return updateoBject( state, {error: action.error,loading:false})
+    return updateObject( state, {error: action.error,loading:false})
 }
 const authUserStart  = (state,action) => {
-    return updateoBject(state , {error:null,loading:true})
+    return updateObject(state , {error:null,loading:true})
 }
 const checkAuTimeOut  = (state,action) => {
-    return updateoBject(state , {error:null,loading:true})
+    return updateObject(state , {error:null,loading:true})
 }
 const authUser  = (state,action) => {
-    return updateoBject(state , {error:false,loading:true})
+    return updateObject(state , {error:false,loading:true})
 }
 const authUserSignnup  = (state,action) => {
-    return updateoBject(state , {error:false,loading:true})
+    return updateObject(state , {error:false,loading:true})
 }
 const authLogout = (state,action) => {
-    return updateoBject(state,{userId:null,token:null})
+    return updateObject(state,{userId:null,token:null})
 }
 const setAuthRedirectPath = (state, action) => {
-    return updateoBject(state, {authRedirectPath: action.path})
+    return updateObject(state, {authRedirectPath: action.path})
 }
 const reducer = (state = initialState,action) => {
     switch (action.type) {
